@@ -1,0 +1,95 @@
+/* Root styles */
+.root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #f4f4f9;
+}
+
+/* Header Label */
+.header-label {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 10 0;
+}
+
+/* Content Pane */
+.content-pane {
+    -fx-padding: 20;
+}
+
+/* Search Field */
+.search-field {
+    -fx-font-size: 14px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 5;
+    -fx-padding: 5 10;
+}
+
+.search-field:focused {
+    -fx-border-color: #4CAF50;
+    -fx-effect: dropshadow(gaussian, #4CAF50, 10, 0, 0, 0);
+}
+
+/* Table View */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dddddd;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #4CAF50;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #f9f9f9;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #ffffff;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+/* Button Pane */
+.button-pane {
+    -fx-padding: 20;
+    -fx-background-color: #f9f9f9;
+}
+
+/* Buttons */
+.button {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-pref-width: 120px;
+    -fx-pref-height: 35px;
+}
+
+.add-button {
+    -fx-background-color: #4CAF50;
+}
+
+.update-button {
+    -fx-background-color: #FFC107;
+    -fx-text-fill: black;
+}
+
+.delete-button {
+    -fx-background-color: #E53935;
+}
+
+.button:hover {
+    -fx-opacity: 0.85;
+}
