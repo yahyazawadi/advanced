@@ -1,0 +1,117 @@
+/* تصميم منطقة البحث */
+
+
+
+
+/* تصميم الشريط الجانبي */
+  .sidebar {
+      -fx-background-color: #F8F8F8;
+      -fx-padding: 20;
+      -fx-spacing: 10;
+  }
+
+.logo {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+    -fx-padding: 10 0 20 0;
+}
+
+.menu-item {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+    -fx-padding: 5 0;
+}
+
+.menu-item:hover {
+    -fx-text-fill: #000000;
+    -fx-cursor: hand;
+}
+
+/* محتوى الصفحة */
+.content-area {
+    -fx-padding: 60;
+}
+
+.heading {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.subheading {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFC107;
+    -fx-padding: 10 0;
+}
+
+.paragraph {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666666;
+    -fx-line-spacing: 5px;
+}
+/* تنسيق شريط البحث */
+.search-bar {
+    -fx-padding: 10;
+    -fx-spacing: 10;
+    -fx-alignment: center;  /* محاذاة العناصر داخل HBox إلى المركز */
+    -fx-background-color: #f4f4f4;
+    -fx-border-color: #ddd;
+    -fx-border-width: 0 0 1px 0;
+}
+
+/* تنسيق حقل الإدخال */
+.search-input {
+    -fx-pref-width: 400px;
+    -fx-font-size: 14px;
+    -fx-padding: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #ccc;
+}
+
+/* تنسيق زر البحث */
+.search-button {
+    -fx-font-size: 14px;
+    -fx-padding: 5 15;
+    -fx-background-color: #0078d4;
+    -fx-text-fill: white;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.search-button:hover {
+    -fx-background-color: #005a9e;
+}
+
+
+/* تصميم زر المحتوى */
+.content-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px; /* padding داخلي */
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-translate-x: 20px; /* إبعاد الزر أفقيًا من اليسار */
+    -fx-translate-y: 10px; /* إبعاد الزر عموديًا من الأعلى */
+}
+
+.content-button:hover {
+    -fx-background-color: #2980b9;
+
+}
+
+.content-button:pressed {
+    -fx-background-color: #1f618d;
+}
+/* تصميم صورة البروفايل بشكل دائري */
+.profile-image {
+    -fx-border-radius: 50%;
+    -fx-shape: "M 25,0 A 25,25 0 1,1 24.999,50 A 25,25 0 1,1 25,0 Z";
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2px;
+    -fx-padding: 10px;  /* مسافة من الحواف */
+}

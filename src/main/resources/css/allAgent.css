@@ -1,0 +1,14 @@
+/* لتحريك العنوان إلى المنتصف */
+.top .label {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-hgap: 10;
+    -fx-translate-x: 50%;  /* تحريك النص إلى المنتصف */
+}
+
+/* لتنسيق حقل البحث ليظهر أسفل العنوان */
+.center .text-field {
+    -fx-pref-width: 300;
+    -fx-margin-top: 10; /* مسافة صغيرة بين العنوان وحقل البحث */
+}

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="550.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.">
+    <children>
+        <Label layoutX="194.0" layoutY="26.0" prefHeight="48.0" prefWidth="153.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #12a3c6;" text="Agent Registration">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="18.0" layoutY="96.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="ID (Username):" />
+        <TextField fx:id="idField" layoutX="100.0" layoutY="91.0" prefHeight="25.0" prefWidth="153.0" />
+
+        <Label layoutX="18.0" layoutY="129.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="First Name:" />
+        <TextField fx:id="firstNameField" layoutX="100.0" layoutY="128.0" prefHeight="25.0" prefWidth="153.0" />
+
+        <Label layoutX="32.0" layoutY="208.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Email:" />
+        <TextField fx:id="emailField" layoutX="100.0" layoutY="204.0" prefHeight="25.0" prefWidth="153.0" />
+
+        <Label layoutX="271.0" layoutY="96.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Phone Number:" />
+        <TextField fx:id="phoneField" layoutX="362.0" layoutY="91.0" prefHeight="25.0" prefWidth="153.0" />
+
+        <Label layoutX="19.0" layoutY="168.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Last Name:" />
+        <TextField fx:id="lastNameField" layoutX="100.0" layoutY="163.0" prefHeight="25.0" prefWidth="153.0" />
+
+        <Label layoutX="21.0" layoutY="249.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Password:" />
+        <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="244.0" prefHeight="25.0" prefWidth="153.0" />
+        <Label fx:id="passwordHintLabel" layoutX="92.0" layoutY="275.0" prefHeight="20.0" prefWidth="289.0" style="-fx-text-fill: red; -fx-font-size: 11px;" text="" />
+
+        <Label layoutX="318.0" layoutY="249.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Role:" />
+        <ChoiceBox fx:id="roleChoiceBox" layoutX="362.0" layoutY="244.0" prefHeight="25.0" prefWidth="153.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="lister" />
+                    <String fx:value="buyer" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <Label layoutX="270.0" layoutY="129.0" prefWidth="86.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Company Name:" />
+        <TextField fx:id="companyNameField" layoutX="362.0" layoutY="128.0" prefHeight="25.0" prefWidth="153.0" />
+
+        <Label layoutX="263.0" layoutY="168.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Company Address:" />
+        <TextField fx:id="companyAddressField" layoutX="362.0" layoutY="163.0" prefHeight="25.0" prefWidth="153.0" />
+
+        <Label layoutX="313.0" layoutY="208.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Status:" />
+        <ChoiceBox fx:id="statusChoiceBox" layoutX="362.0" layoutY="204.0" prefHeight="25.0" prefWidth="153.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="active" />
+                    <String fx:value="banned" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <HBox alignment="CENTER" layoutX="177.0" layoutY="295.0" prefHeight="48.0" prefWidth="205.0" spacing="25.0">
+            <Button fx:id="btn_submit" onAction="#handleSubmit" prefHeight="30.0" prefWidth="90.0" style="-fx-font-size: 12px; -fx-background-color: #12a3c6; -fx-text-fill: white;" text="Submit" />
+            <Button fx:id="btn_cancel" onAction="#handleClear" prefHeight="30.0" prefWidth="97.0" style="-fx-font-size: 12px; -fx-background-color: #ff6666; -fx-text-fill: white;" text="Cancel" />
+        </HBox>
+    </children>
+</AnchorPane> 

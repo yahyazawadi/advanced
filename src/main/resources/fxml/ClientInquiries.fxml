@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.geometry.Insets?>
+<BorderPane stylesheets="/css/ClientInquiries.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.">
+
+    <!-- Top Section -->
+    <top>
+        <StackPane>
+            <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Client Interaction Management" />
+        </StackPane>
+    </top>
+
+    <!-- Center Section -->
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <!-- Search Bar -->
+            <TextField fx:id="searchField" promptText="Search by Client Name, Phone, or Inquiry Type"
+                       style="-fx-pref-width: 400; -fx-font-size: 14px;" />
+
+            <!-- Table for Logging Interactions -->
+            <TableView fx:id="interactionsTable" style="-fx-pref-width: 800; -fx-pref-height: 300;">
+                <columns>
+                    <TableColumn fx:id="idCol" text="ID" minWidth="50" />
+                    <TableColumn fx:id="clientNameCol" text="Client Name" minWidth="200" />
+                    <TableColumn fx:id="interactionTypeCol" text="Interaction Type" minWidth="150" />
+                    <TableColumn fx:id="dateCol" text="Date" minWidth="150" />
+                    <TableColumn fx:id="statusCol" text="Status" minWidth="120" />
+                    <TableColumn fx:id="commentsCol" text="Comments" minWidth="250" />
+                    <TableColumn fx:id="offerIdCol" text="Offer ID" minWidth="100" />
+                    <TableColumn fx:id="propertyIdCol" text="Property ID" minWidth="100" />
+                    <TableColumn fx:id="clientIdCol" text="Client ID" minWidth="100" />
+                    <TableColumn fx:id="agentIdCol" text="Agent ID" minWidth="100" />
+                    <TableColumn fx:id="offerTypeCol" text="Offer Type" minWidth="150" />
+                    <TableColumn fx:id="detailsCol" text="Details" minWidth="300" />
+                    <TableColumn fx:id="finalPriceCol" text="Final Price" minWidth="150" />
+                    <TableColumn fx:id="createdAtCol" text="Created At" minWidth="150" />
+                    <TableColumn fx:id="updatedAtCol" text="Updated At" minWidth="150" />
+
+                </columns>
+            </TableView>
+
+
+        </VBox>
+    </center>
+
+    <!-- Bottom Section -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="20" style="-fx-padding: 20; -fx-background-color: #f9f9f9;">
+            <Button fx:id="saveButton" text="Save Interaction"
+                    style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-pref-width: 200;" />
+            <Button fx:id="deleteButton" text="Delete Interaction"
+                    style="-fx-background-color: red; -fx-text-fill: white; -fx-pref-width: 200;" />
+        </HBox>
+    </bottom>
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+</BorderPane>
