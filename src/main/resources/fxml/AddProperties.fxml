@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_application.HelloController">
+<AnchorPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddPropertyController">
     <children>
 
         <HBox layoutX="20.0" layoutY="50.0" spacing="40.0">
@@ -44,7 +44,7 @@
 
 
                 <Label text="" />
-                <Button fx:id="btn_save" onAction="#SaveRealEstate" style="-fx-background-color: #12a3c6; -fx-text-fill: white;" text="Save" />
+                <Button fx:id="btn_save"  style="-fx-background-color: #12a3c6; -fx-text-fill: white;" text="Save" />
             </VBox>
         </HBox>
     </children>

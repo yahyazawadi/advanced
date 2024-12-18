@@ -10,9 +10,12 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="802.0" prefWidth="1200.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="802.0" prefWidth="1124.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.AgentDashBoardController"
+>
     <children>
-        <VBox layoutX="47.0" layoutY="401.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="392.0" layoutY="431.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Lands">
                     <VBox.margin>
@@ -20,9 +23,9 @@
                     </VBox.margin>
                 </Label>
                 <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@/lands.jpg" />
-                    </image>
+                    <!-- <image>
+                        <Image url="@../../../../../../../test/src/main/resources/ps/waleed/test/lands.jpg" />
+                     </image> -->
                     <VBox.margin>
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
@@ -39,7 +42,7 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="483.0" layoutY="203.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="817.0" layoutY="231.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Homes">
                     <VBox.margin>
@@ -47,9 +50,9 @@
                     </VBox.margin>
                 </Label>
                 <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@/home.png" />
-                    </image>
+                    <!-- <image>
+                        <Image url="@../../../../../../../test/src/main/resources/ps/waleed/test/home.png" />
+                     </image> -->
                     <VBox.margin>
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
@@ -66,7 +69,7 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="489.0" layoutY="401.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="827.0" layoutY="431.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="My Offers">
                     <VBox.margin>
@@ -74,9 +77,9 @@
                     </VBox.margin>
                 </Label>
                 <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@/offers.png" />
-                    </image>
+                    <!-- <image>
+                        <Image url="@../../../../../../../test/src/main/resources/ps/waleed/test/offers.png" />
+                     </image> -->
                     <VBox.margin>
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
@@ -93,7 +96,7 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="47.0" layoutY="203.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="392.0" layoutY="231.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Apartments">
                     <VBox.margin>
@@ -101,9 +104,9 @@
                     </VBox.margin>
                 </Label>
                 <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@/app.png" />
-                    </image>
+                    <!-- <image>
+                        <Image url="@../../../../../../../test/src/main/resources/ps/waleed/test/app.png" />
+                     </image> -->
                     <VBox.margin>
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
@@ -120,7 +123,7 @@
                 </Text>
             </children>
         </VBox>
-        <HBox prefHeight="131.0" prefWidth="1539.0" style="-fx-background-color: #fff;">
+        <HBox layoutX="282.0" layoutY="1.0" prefHeight="131.0" prefWidth="1410.0" style="-fx-background-color: #fff;">
             <children>
                 <AnchorPane prefHeight="131.0" prefWidth="137.0" />
                 <Label text="Dashboard Overview" textFill="#0c067e">
@@ -140,4 +143,5 @@
     <padding>
         <Insets top="3.0" />
     </padding>
+
 </AnchorPane>

@@ -14,7 +14,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controller."
+            fx:controller="controller.OfferTableController"
             stylesheets="@/css/ClientInquiries.css">
 
     <top>

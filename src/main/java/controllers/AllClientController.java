@@ -168,4 +168,5 @@ public class AllClientController {
         clientTable.setItems(filteredList);
     }
 
-*/}
+*/
+}

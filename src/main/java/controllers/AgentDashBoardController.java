@@ -42,8 +42,16 @@ public class AgentDashBoardController {
     /**
      * Initializes the controller after the root element has been completely processed.
      */
+
     @FXML
     public void initialize() {
+        // Validate that buttons are not null
+        if (NewPropertiesButton == null || viewPropertiesButton == null ||
+                NewClientButton == null || clientsButton == null ||
+                propertyInquiriesButton == null || myPropertyInquiriesButton == null) {
+            throw new IllegalStateException("One or more buttons are not properly injected. Please check the FXML file.");
+        }
+
         // Assign actions to buttons dynamically
         NewPropertiesButton.setOnAction(this::handleNewPropertiesButton);
         viewPropertiesButton.setOnAction(this::handlePropertiesClick);
@@ -52,6 +60,7 @@ public class AgentDashBoardController {
         propertyInquiriesButton.setOnAction(this::handlePropertyInquiriesButton);
         myPropertyInquiriesButton.setOnAction(this::handleMyPropertyInquiriesButton);
     }
+
 
     /**
      * Handles navigation to a specific FXML file.
@@ -71,11 +80,11 @@ public class AgentDashBoardController {
 
     // Individual button handlers
     public void handleDashboardButton(ActionEvent event) {
-        navigateTo(event, "/fxml/AdminDashboard.fxml");
+        navigateTo(event, "/fxml/AgentDashboard.fxml");
     }
 
     public void handleNewPropertiesButton(ActionEvent event) {
-        navigateTo(event, "/fxml/AddRealEstate.fxml");
+        navigateTo(event, "/fxml/AddProperties.fxml");
     }
 
     public void handlePropertiesClick(ActionEvent event) {
@@ -87,7 +96,7 @@ public class AgentDashBoardController {
     }
 
     public void handleClientsButton(ActionEvent event) {
-        navigateTo(event, "/fxml/allClient.fxml");
+        navigateTo(event, "/fxml/allClients.fxml");
     }
 
     public void handlePropertyInquiriesButton(ActionEvent event) {
@@ -95,6 +104,6 @@ public class AgentDashBoardController {
     }
 
     public void handleMyPropertyInquiriesButton(ActionEvent event) {
-        navigateTo(event, "/fxml/MyPropertyInquiries.fxml");
+        navigateTo(event, "/fxml/OfferTable.fxml");
     }
 }

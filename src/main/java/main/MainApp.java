@@ -31,7 +31,7 @@ public class MainApp extends Application {
     }
 
     public static void showAgentDashboard() throws Exception {
-        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/AgentDashBoard.fxml"));
+        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/SideBar.fxml"));
         Scene scene = new Scene(loader.load());
         primaryStage.setTitle("Agent Dashboard");
         primaryStage.setScene(scene);

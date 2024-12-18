@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.geometry.Insets?>
-<BorderPane stylesheets="/css/ClientInquiries.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.">
+<BorderPane stylesheets="/css/ClientInquiries.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientInquiriesController">
 
     <!-- Top Section -->
     <top>
