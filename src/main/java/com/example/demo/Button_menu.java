@@ -8,7 +8,7 @@ import javafx.scene.control.ContextMenu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.input.MouseEvent;
 
-public class HelloController {
+public class Button_menu {
 
     @FXML
     private Button contentButton;
