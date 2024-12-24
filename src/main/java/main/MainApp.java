@@ -1,3 +1,4 @@
+
 package main;
 
 import javafx.application.Application;
@@ -23,7 +24,7 @@ public class MainApp extends Application {
     }
 
     public static void showAdminDashboard() throws Exception {
-        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/AdminDashBoard.fxml"));
+        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/sidebarAdmain.fxml"));
         Scene scene = new Scene(loader.load());
         primaryStage.setTitle("Admin Dashboard");
         primaryStage.setScene(scene);
@@ -31,7 +32,7 @@ public class MainApp extends Application {
     }
 
     public static void showAgentDashboard() throws Exception {
-        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/SideBar.fxml"));
+        FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/fxml/sidebarAgent.fxml"));
         Scene scene = new Scene(loader.load());
         primaryStage.setTitle("Agent Dashboard");
         primaryStage.setScene(scene);

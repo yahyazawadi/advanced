@@ -14,8 +14,8 @@
 
 <BorderPane xmlns="http://javafx.com/javafx/23.0.1"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controller.OfferTableController"
-            stylesheets="@/css/ClientInquiries.css">
+            fx:controller="controllers.OfferTableController"
+           >
 
     <top>
         <!-- Header Title -->
@@ -36,7 +36,7 @@
             <!-- Table View -->
             <TableView fx:id="offersTable"
                        styleClass="table-view">
-                <columns>
+                <columns >
                     <TableColumn fx:id="offerIdCol" text="Offer ID" minWidth="100" />
                     <TableColumn fx:id="propertyIdCol" text="Property ID" minWidth="100" />
                     <TableColumn fx:id="clientIdCol" text="Client ID" minWidth="100" />

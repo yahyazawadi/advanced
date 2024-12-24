@@ -11,20 +11,12 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="controllers.AddClientController">
+<BorderPane prefHeight="684.0" prefWidth="1306.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddClientController">
     <center>
-        <VBox alignment="CENTER" spacing="20"
-              style="-fx-background-color: #f9f9f9; -fx-alignment: center;
-                     -fx-padding: 20; -fx-max-width: 100%; -fx-max-height: 100%;
-                     -fx-min-width: 700; -fx-min-height: 600; -fx-pref-width: 100%;
-                     -fx-pref-height: 100%;">
-
+        <VBox alignment="CENTER" maxHeight="600.0" maxWidth="797.0" prefHeight="600.0" prefWidth="797.0" spacing="20" style="-fx-background-color: #f9f9f9; -fx-alignment: center;                      -fx-padding: 20; -fx-max-width: 100%; -fx-max-height: 100%;                      -fx-min-width: 700; -fx-min-height: 600; -fx-pref-width: 100%;                      -fx-pref-height: 100%;">
             <children>
                 <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Customer Information Registration" />
-
-                <!-- إزالة الكارد الداخلي: إزالة الحدود والخلفية والتأثيرات -->
-                <VBox spacing="15" style="-fx-border-width: 0; -fx-background-color: transparent; -fx-padding: 0; -fx-effect: none;">
+                <VBox prefHeight="314.0" prefWidth="728.0" spacing="15" style="-fx-border-width: 0; -fx-background-color: transparent; -fx-padding: 0; -fx-effect: none;">
                     <children>
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <children>
@@ -32,21 +24,18 @@
                                 <TextField fx:id="fullNameField" promptText="Enter full name" style="-fx-pref-width: 400;" />
                             </children>
                         </HBox>
-
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <children>
                                 <Label style="-fx-min-width: 120;" text="Email:" />
                                 <TextField fx:id="emailField" promptText="Enter email address" style="-fx-pref-width: 400;" />
                             </children>
                         </HBox>
-
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <children>
                                 <Label style="-fx-min-width: 120;" text="Phone Number:" />
                                 <TextField fx:id="phoneField" promptText="Enter phone number" style="-fx-pref-width: 400;" />
                             </children>
                         </HBox>
-
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <children>
                                 <Label style="-fx-min-width: 120;" text="Location:" />
@@ -61,7 +50,6 @@
                                 </ComboBox>
                             </children>
                         </HBox>
-
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <children>
                                 <Label style="-fx-min-width: 120;" text="Property Type:" />
@@ -76,14 +64,12 @@
                                 </ComboBox>
                             </children>
                         </HBox>
-
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <children>
                                 <Label style="-fx-min-width: 120;" text="Budget:" />
                                 <TextField fx:id="budgetField" promptText="Enter budget range" style="-fx-pref-width: 400;" />
                             </children>
                         </HBox>
-
                         <HBox alignment="CENTER_LEFT" spacing="15">
                             <children>
                                 <Label style="-fx-min-width: 120;" text="Notes:" />
@@ -92,13 +78,10 @@
                         </HBox>
                     </children>
                 </VBox>
-
                 <HBox alignment="CENTER" spacing="40">
                     <children>
-                        <Button fx:id="saveButton" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="100.0"
-                                style="-fx-background-color: #030280; -fx-text-fill: white;" text="Save" />
-                        <Button fx:id="cancelButton" prefHeight="26.0" prefWidth="100.0"
-                                style="-fx-background-color: red; -fx-text-fill: white;" text="Cancel" />
+                        <Button fx:id="saveButton" onAction="#onSaveButtonClick" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #030280; -fx-text-fill: white;" text="Save" />
+                        <Button fx:id="cancelButton" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: red; -fx-text-fill: white;" text="Cancel" />
                     </children>
                 </HBox>
             </children>

@@ -1,120 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-        <?import javafx.geometry.Insets?>
-        <?import javafx.scene.control.Button?>
-        <?import javafx.scene.control.Label?>
-        <?import javafx.scene.image.Image?>
-        <?import javafx.scene.image.ImageView?>
-        <?import javafx.scene.layout.AnchorPane?>
-        <?import javafx.scene.layout.HBox?>
-        <?import javafx.scene.layout.VBox?>
-        <?import javafx.scene.text.Font?>
-        <?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="802.0" prefWidth="1500.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminDashBoardController"
->
+<AnchorPane prefHeight="684.0" prefWidth="1302.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <VBox layoutX="-1.0" layoutY="-3.0" prefHeight="802.0" prefWidth="282.0" style="-fx-background-color: #fff;">
-            <children>
-                <HBox prefHeight="31.0" prefWidth="267.0" />
-                <HBox prefHeight="83.0" prefWidth="267.0">
-                    <children>
-                        <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@/Reat.png" />
-                            </image>
-                            <HBox.margin>
-                                <Insets bottom="20.0" left="20.0" top="20.0" />
-                            </HBox.margin>
-                        </ImageView>
-                        <Label prefHeight="55.0" prefWidth="124.0" text="RealEstate" textAlignment="JUSTIFY">
-                            <font>
-                                <Font name="System Bold" size="22.0" />
-                            </font>
-                            <HBox.margin>
-                                <Insets bottom="20.0" left="15.0" right="20.0" />
-                            </HBox.margin>
-                            <padding>
-                                <Insets left="-14.0" top="25.0" />
-                            </padding>
-                        </Label>
-                    </children>
-                </HBox>
-                <VBox alignment="TOP_LEFT" prefHeight="337.0" prefWidth="267.0" spacing="10" style="-fx-padding: 20;">
-                    <children>
-                        <Button fx:id="DashboardButton"  style="-fx-background-color: #e6f7ff; -fx-text-fill: blue; -fx-font-size: 14px; -fx-padding: 10px 20px; -fx-background-radius: 5px;" text=" Dashboard" textFill="#faf7f7">
-                            <graphic>
-                                <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@/dashboard-icon-256x256-84zenj5q.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                            <VBox.margin>
-                                <Insets left="-10.0" />
-                            </VBox.margin>
-                        </Button>
-                        <Button fx:id="Newproperty"  style="-fx-background-color: transparent; -fx-text-fill: #333; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px;" text="New property">
-                            <font>
-                                <Font name="System Bold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <ImageView fitHeight="19.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@/add.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button fx:id="viewPropertiesButton1"   style="-fx-background-color: transparent; -fx-text-fill: #333; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px;" text=" Properties">
-                            <graphic>
-                                <ImageView fitHeight="19.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@/aperment.jpg" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button fx:id="newtclient" style="-fx-background-color: transparent; -fx-text-fill: #333; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px;" text="New Client">
-                            <font>
-                                <Font name="System Bold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <ImageView fitHeight="19.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@/add.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button fx:id="clientsButton"  style="-fx-background-color: transparent; -fx-text-fill: #333; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px;" text="👥 All Clients" />
-                        <Button fx:id="viewPropertiesButton21"  style="-fx-background-color: transparent; -fx-text-fill: #333; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px;" text="New Agent">
-                            <font>
-                                <Font name="System Bold" size="12.0" />
-                            </font>
-                            <graphic>
-                                <ImageView fitHeight="19.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@/add.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                        </Button>
-                        <Button fx:id="propertyInquiriesButton"   style="-fx-background-color: transparent; -fx-text-fill: #333; -fx-font-size: 14px; -fx-padding: 10px; -fx-background-radius: 5px;" text="All Agents">
-                            <graphic>
-                                <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@/agent-icon-10.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic></Button>
-                    </children>
-                </VBox>
-                <HBox prefHeight="52.0" prefWidth="150.0" />
-            </children>
-        </VBox>
-        <VBox alignment="center" layoutX="415.0" layoutY="23.0" prefHeight="131.0" prefWidth="294.0" spacing="10" />
-        <VBox layoutX="333.0" layoutY="453.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="85.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Lands">
                     <VBox.margin>
@@ -141,7 +39,7 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="726.0" layoutY="244.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="489.0" layoutY="191.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Homes">
                     <VBox.margin>
@@ -168,7 +66,7 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="726.0" layoutY="453.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="491.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text=" Offers">
                     <VBox.margin>
@@ -195,7 +93,7 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="333.0" layoutY="244.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="85.0" layoutY="191.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Apartments">
                     <VBox.margin>
@@ -222,17 +120,33 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="1125.0" layoutY="244.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <HBox layoutX="5.0" layoutY="-7.0" prefHeight="98.0" prefWidth="1296.0" style="-fx-background-color: #fff;">
+            <children>
+                <AnchorPane prefHeight="106.0" prefWidth="373.0">
+                    <children>
+                        <Label layoutX="74.0" layoutY="8.0" text="Dashboard Overview" textFill="#0c067e">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" top="20.0" />
+                            </padding>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="65.0" text="Welcome back, Admain" />
+                    </children></AnchorPane>
+            </children>
+        </HBox>
+        <VBox layoutX="889.0" layoutY="199.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Agents">
                     <VBox.margin>
                         <Insets left="16.0" top="14.0" />
                     </VBox.margin>
                 </Label>
-                <ImageView fitHeight="31.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
-                    <!--<image>
-                        <Image url="@/agentcolor.png" />
-                    </image>-->
+                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@/home.png" />
+                    </image>
                     <VBox.margin>
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
@@ -242,26 +156,26 @@
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
                 </Text>
-                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed Agents">
+                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed agents">
                     <VBox.margin>
                         <Insets left="16.0" top="4.0" />
                     </VBox.margin>
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="1141.0" layoutY="453.0" prefHeight="131.0" prefWidth="302.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="898.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
                 <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Clients">
                     <VBox.margin>
                         <Insets left="16.0" top="14.0" />
                     </VBox.margin>
                 </Label>
-                <ImageView fitHeight="31.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@/clients.jpg" />
+                        <Image url="@/home.png" />
                     </image>
                     <VBox.margin>
-                        <Insets left="250.0" top="-35.0" />
+                        <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
                 <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="1400">
@@ -269,41 +183,12 @@
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
                 </Text>
-                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed Clientss">
+                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed clients">
                     <VBox.margin>
                         <Insets left="16.0" top="4.0" />
                     </VBox.margin>
                 </Text>
             </children>
         </VBox>
-        <HBox layoutX="281.0" layoutY="1.0" prefHeight="131.0" prefWidth="1400.0" style="-fx-background-color: #fff;">
-            <children>
-                <AnchorPane prefHeight="28.0" prefWidth="200.0" />
-                <Label text="Dashboard Overview" textFill="#0c067e">
-                    <font>
-                        <Font name="System Bold" size="25.0" />
-                    </font>
-                    <padding>
-                        <Insets bottom="10.0" top="4.0" />
-                    </padding>
-                    <HBox.margin>
-                        <Insets left="-80.0" top="60.0" />
-                    </HBox.margin>
-                </Label>
-                <Label text="Welcome back, Admin">
-                    <HBox.margin>
-                        <Insets left="-280.0" top="100.0" />
-                    </HBox.margin>
-                    <padding>
-                        <Insets left="40.0" />
-                    </padding>
-                </Label>
-            </children>
-        </HBox>
     </children>
-    <padding>
-        <Insets top="3.0" />
-    </padding>
 </AnchorPane>
-
-

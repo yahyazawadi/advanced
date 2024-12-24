@@ -12,7 +12,7 @@ import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
-public class NavBarController {
+public class NavBarControllerAgent {
 
     // Define buttons matching FXML fx:id
     @FXML
@@ -53,20 +53,20 @@ public class NavBarController {
         viewPropertiesButton.setOnAction(this::handleViewProperties);
         newClientButton.setOnAction(this::handleAddClient);
         clientsButton.setOnAction(this::handleViewClients);
-        propertyInquiriesButton.setOnAction(this::handleViewInquiries);
-        myPropertyInquiriesButton.setOnAction(this::handlePropertyInquiries);
+        myPropertyInquiriesButton .setOnAction(this::handleViewInquiries);
+        propertyInquiriesButton.setOnAction(this::handlePropertyInquiries);
 
         // Initial page load (optional, you can load any default page here)
         loadPage("/fxml/AgentDashboard.fxml");
     }
 
     @FXML
-    private void handlePropertyInquiries(ActionEvent actionEvent) {
+    private void handleViewInquiries(ActionEvent actionEvent) {
         loadPage("/fxml/OfferTable.fxml");
     }
 
     @FXML
-    private void handleViewInquiries(ActionEvent actionEvent) {
+    private void handlePropertyInquiries(ActionEvent actionEvent) {
         loadPage("/fxml/ClientInquiries.fxml");
     }
 
@@ -109,13 +109,7 @@ public class NavBarController {
         loadPage("/fxml/ClientTable.fxml");
     }
 
-    public void handlePropertyInquiriesButton(ActionEvent event) {
-        loadPage("/fxml/PropertyInquiries.fxml");
-    }
 
-    public void handleMyPropertyInquiriesButton(ActionEvent event) {
-        loadPage("/fxml/MyPropertyInquiries.fxml");
-    }
 
     public void login(ActionEvent actionEvent) {
         try {
