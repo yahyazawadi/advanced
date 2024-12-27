@@ -1,13 +1,27 @@
 package com.example.real_estate_application.models;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="Agreement")
 public class Agreement {
+    @Id
+    @GeneratedValue
+    @Column(name = "offerId")
     int offerId;
+    @Column(name = "propertyId")
     int propertyId;
+    @Column(name = "clientId")
     int clientId;
+    @Column(name = "agentId")
     int agentId;
+    @Column(name = "offerType")
     String offerType;
+    @Column(name = "details")
     String details;
+    @Column(name = "FinalPrice")
     int FinalPrice;
+    @Column(name = "made_at")
     String made_at;
 
     public int getOfferId() {
