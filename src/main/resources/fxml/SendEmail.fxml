@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SendEmailController">
+    <children>
+        <VBox alignment="CENTER" layoutX="150.0" layoutY="109.0" spacing="15">
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Password Reset" textFill="#030280" />
+            <Label style="-fx-font-size: 14px;" text="Enter your registered email:">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font></Label>
+            <TextField fx:id="emailField" prefWidth="300" promptText="Email address">
+            <font>
+               <Font size="16.0" />
+            </font></TextField>
+            <Button onAction="#handleSendEmail" prefHeight="35.0" prefWidth="192.0" style="-fx-background-color: #030280; -fx-text-fill: white;" text="Send Verification Code" textFill="#030280">
+            <font>
+               <Font size="16.0" />
+            </font></Button>
+            <Label fx:id="statusLabel" style="-fx-font-size: 12px;" textFill="red" />
+        </VBox>
+    </children>
+</AnchorPane>

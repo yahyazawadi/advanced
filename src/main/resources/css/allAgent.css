@@ -1,0 +1,13 @@
+.top .label {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-hgap: 10;
+    -fx-translate-x: 50%;
+}
+
+
+.center .text-field {
+    -fx-pref-width: 300;
+    -fx-margin-top: 10;
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReceivedInquriesController">
+    <top>
+        <StackPane>
+            <Label style="-fx-font-size: 18; -fx-font-weight: bold;" textFill="#030280" text="My received Inquires
+" />
+        </StackPane>
+    </top>
+
+    <center>
+        <VBox spacing="10" style="-fx-padding: 20;" VBox.vgrow="ALWAYS">
+            <!-- Search Field -->
+            <TextField fx:id="searchField" promptText="Search by name, email, or phone number" style="-fx-pref-width: 300;" />
+
+            <!-- Client Table -->
+
+            <!-- Received Inquiries Table -->
+            <TableView fx:id="receivedInquiriesTable" style="-fx-pref-width: 1100;" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="inquiryIdColumn" text="Inquiry ID" minWidth="100" maxWidth="150" />
+                    <TableColumn fx:id="agentIdColumn" text="Agent ID" minWidth="100" maxWidth="150" />
+                    <TableColumn fx:id="clientIdColumn" text="Client ID" minWidth="100" maxWidth="150" />
+                    <TableColumn fx:id="clientNameColumn" text="Client Name" minWidth="150" maxWidth="250" />
+                    <TableColumn fx:id="dateColumn" text="Date" minWidth="100" maxWidth="150" />
+                    <TableColumn fx:id="statusColumn" text="Status" minWidth="100" maxWidth="150" />
+                    <TableColumn fx:id="propertyIdColumn" text="Property ID" minWidth="100" maxWidth="150" />
+                    <TableColumn fx:id="detailsColumn" text="Details" minWidth="200" maxWidth="300" />
+                    <TableColumn fx:id="finalPriceColumn" text="Final Price" minWidth="100" maxWidth="150" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+</BorderPane>
