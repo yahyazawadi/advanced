@@ -70,18 +70,17 @@ public class RealEstateDAOImp implements RealEstateDAO {
     }
     @Override
     public void start(Stage primaryStage) {
-        // إنشاء نافذة لاختيار الملف
+
         FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("اختر صورة لتحميلها");
+        fileChooser.setTitle("choose images");
         fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
 
-        // إظهار نافذة اختيار الملف وانتظار النتيجة
         File selectedFile = fileChooser.showOpenDialog(primaryStage);
 
            if (selectedFile != null) {
                uploadImageToDatabase(selectedFile);
            } else {
-               System.out.println("لم يتم اختيار أي ملف.");
+               System.out.println("no images selected");
            }
 
 
@@ -91,7 +90,7 @@ public class RealEstateDAOImp implements RealEstateDAO {
         try {
             return Files.readAllBytes(file.toPath()); // تحويل الصورة إلى byte[]
         } catch (IOException e) {
-            System.out.println("فشل في قراءة الصورة: " + e.getMessage());
+            System.out.println(" failed to read images " + e.getMessage());
             return null;
         }
     }
@@ -99,9 +98,9 @@ public class RealEstateDAOImp implements RealEstateDAO {
         byte[] imageBytes = readImageBytes(file);
         try {
             imageBytes = Files.readAllBytes(file.toPath()); // تحويل الصورة إلى byte[]
-            System.out.println("تم تحميل الصورة بنجاح: " + file.getName());
+            System.out.println("Image uploaded" + file.getName());
         } catch (IOException e) {
-            System.out.println("فشل في تحميل الصورة: " + e.getMessage());
+            System.out.println("failed" + e.getMessage());
         }
     }
 }

@@ -97,7 +97,11 @@ public class HelloControllerAdd {
         }
     }
 
-
+    private void displayImage(byte[] imageBytes) {
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(imageBytes);
+        Image image = new Image(inputStream);
+        imageView.setImage(image);
+    }
 }
 
 
