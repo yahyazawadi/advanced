@@ -17,7 +17,9 @@ module main.MainApp {
     requires java.persistence;
     requires org.hibernate.orm.core;
     requires jdk.internal.le;
-    requires java.naming;    // Allow JavaFX to access controllers and main app using reflection
+    requires java.naming;
+    requires java.mail;
+    requires jbcrypt;    // Allow JavaFX to access controllers and main app using reflection
     opens com.example.real_estate_group14 to javafx.fxml;
     opens controllers to javafx.fxml;
     opens main.models to org.hibernate.orm.core;

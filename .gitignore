@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Sensitive Files ###
+target/classes/hibernate.cfg.xml
+src/main/resources/hibernate.cfg.xml

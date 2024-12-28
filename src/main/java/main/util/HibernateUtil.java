@@ -1,5 +1,6 @@
 package main.util;
 
+import main.models.Agents;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
@@ -16,6 +17,8 @@ public class HibernateUtil {
     private HibernateUtil(){
         Configuration configuration = new Configuration();
         configuration.addAnnotatedClass(Customer.class);
+        configuration.addAnnotatedClass(Agents.class);
+
         configuration.configure();
         serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
         sessionFactory = configuration.buildSessionFactory(serviceRegistry);

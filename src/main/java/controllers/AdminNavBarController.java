@@ -62,7 +62,7 @@ public class AdminNavBarController {
 
     @FXML
     private void newagentbutton(ActionEvent actionEvent) {
-        loadPage("/fxml/NewAgentForm.fxml");
+        loadPage("/fxml/AddAgents.fxml");
     }
 
     @FXML

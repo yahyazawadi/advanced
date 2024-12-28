@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="550.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.NewAgentFormController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="550.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddAgentsController">
     <children>
-        <Label layoutX="194.0" layoutY="26.0" prefHeight="48.0" prefWidth="153.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #030280;" text="Agent Registration">
+        <Label layoutX="194.0" layoutY="26.0" prefHeight="48.0" prefWidth="153.0" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #12a3c6;" text="Agent Registration">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
@@ -38,12 +38,13 @@
         <PasswordField fx:id="passwordField" layoutX="100.0" layoutY="244.0" prefHeight="25.0" prefWidth="153.0" />
         <Label fx:id="passwordHintLabel" layoutX="92.0" layoutY="275.0" prefHeight="20.0" prefWidth="289.0" style="-fx-text-fill: red; -fx-font-size: 11px;" text="" />
 
-        <Label layoutX="318.0" layoutY="249.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Role:" />
-        <ChoiceBox fx:id="roleChoiceBox" layoutX="362.0" layoutY="244.0" prefHeight="25.0" prefWidth="153.0">
+        <Label layoutX="313.0" layoutY="208.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Role:" />
+        <ChoiceBox fx:id="roleChoiceBox" layoutX="362.0" layoutY="204.0" prefHeight="25.0" prefWidth="153.0">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                     <String fx:value="lister" />
                     <String fx:value="buyer" />
+                    <String fx:value="lister and buyer" />
                 </FXCollections>
             </items>
         </ChoiceBox>
@@ -54,19 +55,9 @@
         <Label layoutX="263.0" layoutY="168.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Company Address:" />
         <TextField fx:id="companyAddressField" layoutX="362.0" layoutY="163.0" prefHeight="25.0" prefWidth="153.0" />
 
-        <Label layoutX="313.0" layoutY="208.0" style="-fx-font-weight: bold; -fx-font-size: 11px;" text="Status:" />
-        <ChoiceBox fx:id="statusChoiceBox" layoutX="362.0" layoutY="204.0" prefHeight="25.0" prefWidth="153.0">
-            <items>
-                <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="active" />
-                    <String fx:value="banned" />
-                </FXCollections>
-            </items>
-        </ChoiceBox>
-
         <HBox alignment="CENTER" layoutX="177.0" layoutY="295.0" prefHeight="48.0" prefWidth="205.0" spacing="25.0">
-            <Button fx:id="btn_submit"  prefHeight="30.0" prefWidth="90.0" style="-fx-font-size: 12px; -fx-background-color: #030280; -fx-text-fill: white;" text="Submit" />
-            <Button fx:id="btn_cancel" prefHeight="30.0" prefWidth="97.0" style="-fx-font-size: 12px; -fx-background-color: #ff0000; -fx-text-fill: white;" text="Cancel" />
+            <Button fx:id="btn_submit" onAction="#handleSubmit" prefHeight="30.0" prefWidth="90.0" style="-fx-font-size: 12px; -fx-background-color: #12a3c6; -fx-text-fill: white;" text="Submit" />
+            <Button fx:id="btn_cancel" onAction="#handleClear" prefHeight="30.0" prefWidth="97.0" style="-fx-font-size: 12px; -fx-background-color: #ff6666; -fx-text-fill: white;" text="Cancel" />
         </HBox>
     </children>
-</AnchorPane> 
+</AnchorPane>
