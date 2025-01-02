@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SendEmailController">
+    <children>
+        <Button fx:id="backButton" layoutX="10.0" layoutY="10.0" onAction="#handleBackButton" style="-fx-font-size: 30; -fx-background-color: transparent; -fx-text-fill: #030280;" text="←" />
+        <Label layoutX="200.0" layoutY="40.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #030280;" text="Verify Your Account" />
+
+        <!-- VBox لتنظيم كل قسم -->
+        <VBox alignment="CENTER" layoutX="180.0" layoutY="80.0" prefWidth="240.0" spacing="20">
+            <!-- القسم الأول: البريد الإلكتروني -->
+            <VBox fx:id="emailSection" prefHeight="135.0" prefWidth="257.0" spacing="10" visible="true">
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #030280;" text="Enter Your Email" />
+                <TextField fx:id="emailField" prefWidth="240.0" promptText="Enter Your Email" />
+                <Button onAction="#handleSendEmail" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: #030280; -fx-text-fill: white;" text="Send Verification Code" />
+                <Label fx:id="statusLabel" prefHeight="20.0" prefWidth="300.0" style="-fx-font-size: 14px; -fx-text-fill: green;" />
+            </VBox>
+
+            <!-- القسم الثاني: الكود -->
+            <VBox fx:id="codeSection" spacing="10" visible="false">
+                <Label style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #030280;" text="Enter Verification Code" />
+                <TextField fx:id="verificationCodeField" prefWidth="240.0" promptText="Enter Verification Code" />
+                <Button onAction="#handleSubmitCode" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: #030280; -fx-text-fill: white;" text="Verify Code" />
+                <Label fx:id="verificationStatusLabel" style="-fx-font-size: 14px; -fx-text-fill: red;" />
+            </VBox>
+
+            <!-- القسم الثالث: كلمة السر الجديدة -->
+            <VBox fx:id="passwordSection" spacing="10" visible="false">
+                <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #030280;" text="Set New Password" />
+                <PasswordField fx:id="newPasswordField" prefHeight="40.0" prefWidth="240.0" promptText="New Password" />
+                <Label fx:id="passwordHintLabel" style="-fx-font-size: 11px;" textFill="red" />
+                <Button onAction="#handleSubmitNewPassword" prefHeight="40.0" prefWidth="240.0" style="-fx-background-color: #030280; -fx-text-fill: white;" text="Submit New Password" />
+            </VBox>
+        </VBox>
+    </children>
+</AnchorPane>

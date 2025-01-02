@@ -1,0 +1,44 @@
+.sidebar {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-pref-width: 200px; /* Increase width */
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
+    -fx-spacing: 10px;
+}
+
+.sidebar .HBox .button {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-pref-width: 200px;  /* Increase width explicitly */
+    -fx-pref-height: 35px;  /* Add height to give room */
+    -fx-wrap-text: true;    /* Allow text to wrap */
+    -fx-padding: 0 10 0 10; /* Adjust padding */
+    -fx-text-alignment: left;
+    -fx-alignment: center-left; /* Ensure alignment */
+}
+
+.sidebar .HBox {
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-alignment: center-left;
+    -fx-cursor: hand;
+}
+
+
+.sidebar .HBox:hover {
+    -fx-background-color: #E5E4E2; /* Background color on hover */
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;/* Border color on hover */
+    -fx-cursor: hand; /* Change cursor to hand */
+}
+
+.centerarea-vbox{
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 5);
+}
+
+.Hbutton {
+}

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="684.0" prefWidth="1302.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox layoutX="85.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Lands">
+                    <VBox.margin>
+                        <Insets left="16.0" top="14.0" />
+                    </VBox.margin>
+                </Label>
+                <ImageView fitHeight="36.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/lands.jpg" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="270.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="95">
+                    <VBox.margin>
+                        <Insets left="16.0" top="9.0" />
+                    </VBox.margin>
+                </Text>
+                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed Lands">
+                    <VBox.margin>
+                        <Insets left="16.0" top="4.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <VBox layoutX="489.0" layoutY="191.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Homes">
+                    <VBox.margin>
+                        <Insets left="16.0" top="14.0" />
+                    </VBox.margin>
+                </Label>
+                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/home.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="270.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="183">
+                    <VBox.margin>
+                        <Insets left="16.0" top="9.0" />
+                    </VBox.margin>
+                </Text>
+                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed homes">
+                    <VBox.margin>
+                        <Insets left="16.0" top="4.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <VBox layoutX="491.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text=" Offers">
+                    <VBox.margin>
+                        <Insets left="16.0" top="14.0" />
+                    </VBox.margin>
+                </Label>
+                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/offers.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="270.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="32">
+                    <VBox.margin>
+                        <Insets left="16.0" top="9.0" />
+                    </VBox.margin>
+                </Text>
+                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed Offers">
+                    <VBox.margin>
+                        <Insets left="16.0" top="4.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <VBox layoutX="85.0" layoutY="191.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Apartments">
+                    <VBox.margin>
+                        <Insets left="16.0" top="14.0" />
+                    </VBox.margin>
+                </Label>
+                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/app.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="270.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="247">
+                    <VBox.margin>
+                        <Insets left="16.0" top="9.0" />
+                    </VBox.margin>
+                </Text>
+                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed Apatments">
+                    <VBox.margin>
+                        <Insets left="16.0" top="4.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <HBox layoutX="5.0" layoutY="-7.0" prefHeight="98.0" prefWidth="1296.0" style="-fx-background-color: #fff;">
+            <children>
+                <AnchorPane prefHeight="106.0" prefWidth="373.0">
+                    <children>
+                        <Label layoutX="74.0" layoutY="8.0" text="Dashboard Overview" textFill="#0c067e">
+                            <font>
+                                <Font name="System Bold" size="25.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="10.0" top="20.0" />
+                            </padding>
+                        </Label>
+                        <Label layoutX="74.0" layoutY="65.0" text="Welcome back, Admain" />
+                    </children></AnchorPane>
+            </children>
+        </HBox>
+        <VBox layoutX="889.0" layoutY="199.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+            <children>
+                <Label  style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Agents">
+                    <VBox.margin>
+                        <Insets left="16.0" top="14.0" />
+                    </VBox.margin>
+                </Label>
+                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/home.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="270.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="32">
+                    <VBox.margin>
+                        <Insets left="16.0" top="9.0" />
+                    </VBox.margin>
+                </Text>
+                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed agents">
+                    <VBox.margin>
+                        <Insets left="16.0" top="4.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+        <VBox layoutX="898.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Clients">
+                    <VBox.margin>
+                        <Insets left="16.0" top="14.0" />
+                    </VBox.margin>
+                </Label>
+                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/home.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets left="270.0" top="-35.0" />
+                    </VBox.margin>
+                </ImageView>
+                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="1400">
+                    <VBox.margin>
+                        <Insets left="16.0" top="9.0" />
+                    </VBox.margin>
+                </Text>
+                <Text style="-fx-font-size: 14px; -fx-text-fill: #777777;" text="Total listed clients">
+                    <VBox.margin>
+                        <Insets left="16.0" top="4.0" />
+                    </VBox.margin>
+                </Text>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
