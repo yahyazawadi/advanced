@@ -16,17 +16,7 @@
 
 <GridPane hgap="10" style="-fx-padding: 20; -fx-background-color: #f5f5f5;" vgap="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DeleteAndEditController">
 
-   <VBox style="-fx-background-color: #ffffff; -fx-padding: 10; -fx-spacing: 20;" GridPane.columnIndex="0">
-      <Label style="-fx-font-size: 24px; -fx-text-fill: #1e90ff;" text="TMS" />
-      <VBox spacing="15">
-         <Button style="-fx-background-color: transparent;" text="Dashboard" />
-         <Button style="-fx-background-color: transparent;" text="Property" />
-         <Button style="-fx-background-color: transparent;" text="Tenants" />
-         <Button style="-fx-background-color: transparent;" text="Add Property" />
-         <Button style="-fx-background-color: transparent;" text="Maintainer" />
-         <Button style="-fx-background-color: transparent;" text="Contacts" />
-      </VBox>
-   </VBox>
+
 
    <!-- Main Content -->
    <VBox spacing="20" GridPane.columnIndex="1">
