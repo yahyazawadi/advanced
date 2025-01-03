@@ -7,7 +7,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -19,7 +18,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.List;
 
-public class ViewPropertiesController {
+public class ViewMyPropertiesController {
 
     @FXML
     private GridPane contentArea;
@@ -86,56 +85,68 @@ public class ViewPropertiesController {
             }
         }
     }
-
     private AnchorPane createCard(RealEstate realEstate) {
         AnchorPane card = new AnchorPane();
         card.setStyle("-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC; -fx-border-width: 1; -fx-padding: 10;");
         card.setPrefWidth(380);
-        card.setPrefHeight(300);  // زيادة الارتفاع قليلاً
+        card.setPrefHeight(300);
 
-        // الصورة (تأخذ عرض البطاقة بالكامل)
+        // Image
         ImageView imageView = new ImageView();
-        imageView.setFitWidth(360);  // تعيين عرض الصورة داخل حدود البطاقة
-        imageView.setFitHeight(180); // تحديد ارتفاع الصورة
+        imageView.setFitWidth(360);
+        imageView.setFitHeight(180);
         if (realEstate.getImag() != null) {
             Image image = new Image(new ByteArrayInputStream(realEstate.getImag()));
             imageView.setImage(image);
         } else {
-            imageView.setImage(new Image("file:../images/placeholder.png")); // صورة افتراضية
+            imageView.setImage(new Image("file:../images/placeholder.png"));
         }
-        imageView.setLayoutX(10);  // تعيين الصورة بحيث تأخذ المسافة من الجوانب
-        imageView.setLayoutY(0);  // وضع الصورة في الجزء العلوي من البطاقة
+        imageView.setLayoutX(10);
+        imageView.setLayoutY(0);
 
-        // العنوان (يظهر أولًا)
+        // Title
         Label titleLabel = new Label(realEstate.getNameOfProperty());
         titleLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #333333;");
-        titleLabel.setLayoutX(10);  // تحديد المسافة من الجوانب
-        titleLabel.setLayoutY(imageView.getLayoutY() + imageView.getFitHeight() + 10); // وضع العنوان أسفل الصورة
+        titleLabel.setLayoutX(10);
+        titleLabel.setLayoutY(imageView.getLayoutY() + imageView.getFitHeight() + 10);
 
-        // الوصف (يظهر ثانيًا)
-        Label descriptionLabel = new Label(realEstate.getDescription());
-        descriptionLabel.setWrapText(true);
-        descriptionLabel.setPrefWidth(360);  // عرض الوصف داخل حدود البطاقة
-        descriptionLabel.setStyle("-fx-font-size: 12px; -fx-text-fill: #777777;");
-        descriptionLabel.setLayoutX(10);
-        descriptionLabel.setLayoutY(titleLabel.getLayoutY() + titleLabel.getHeight() + 15);  // إضافة مسافة بين العنوان والوصف
+        // Edit Button
+        Button editButton = new Button("Edit");
+        editButton.setStyle("-fx-font-size: 14px; -fx-background-color: #009688; -fx-text-fill: #FFFFFF;");
+        editButton.setLayoutX(10);
+        editButton.setLayoutY(50);
 
-        // السعر (يظهر ثالثًا)
-        Label priceLabel = new Label("Price: $" + realEstate.getPrice());
-        priceLabel.setStyle("-fx-text-fill: #009688; -fx-font-size: 14px; -fx-font-weight: bold;");
-        priceLabel.setLayoutX(10);
-        priceLabel.setLayoutY(descriptionLabel.getLayoutY() + descriptionLabel.getHeight() + 15);  // إضافة مسافة بين الوصف والسعر
+        // Attach the handleEditButtonAction function
+        editButton.setOnAction(event -> handleEditButtonAction(realEstate.getId()));
 
-        // إضافة المكونات إلى البطاقة
-        card.getChildren().addAll(imageView, titleLabel, descriptionLabel, priceLabel);
 
-        // إضافة معالج الحدث لجعل البطاقة قابلة للضغط
-        card.setOnMouseClicked(event -> {
-            openPropertyDetail(realEstate);
-        });
+        // Add components to the card
+        card.getChildren().addAll(imageView, titleLabel, editButton);
 
         return card;
     }
+
+    @FXML
+    private void handleEditButtonAction(int propertyId) {
+        try {
+            // Load the DeleteAndEdit.fxml page
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/edit.fxml"));
+            Parent editView = loader.load();
+
+            // Get the controller of the loaded page
+            DeleteAndEditController controller = loader.getController();
+
+            // Pass the property ID to the controller
+            controller.setPropertyId(propertyId);
+
+            // Replace the current content with the edit page
+            contentArea.getChildren().setAll(editView);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to load the edit page for property ID: " + propertyId);
+        }
+    }
+
 
 
     private void openPropertyDetail(RealEstate realEstate) {
@@ -152,5 +163,7 @@ public class ViewPropertiesController {
             e.printStackTrace();
         }
     }
+
+
 
 }

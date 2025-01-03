@@ -1,93 +1,39 @@
-        <?import javafx.scene.control.Button?>
-        <?import javafx.scene.control.Label?>
-        <?import javafx.scene.image.ImageView?>
-        <?import javafx.scene.layout.AnchorPane?>
-        <?import javafx.scene.layout.GridPane?>
-        <?import javafx.scene.layout.ColumnConstraints?>
-        <?import javafx.scene.control.ScrollPane?>
-        <?import javafx.scene.image.Image?>
-        <?import javafx.scene.control.TextField?>
-        <?import javafx.scene.control.MenuButton?>
-        <?import javafx.scene.control.MenuItem?>
-        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1190.0"
-                    stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.viewproperties">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewPropertiesController"
+            prefHeight="730.0" prefWidth="1190.0" stylesheets="@../css/home.css">
 
-<children>
-    <!-- الشريط العلوي -->
-    <AnchorPane prefHeight="53.0" prefWidth="1190.0" style="-fx-background-color: D1CECEA0;">
-        <children>
-            <!-- حقل البحث -->
-            <TextField fx:id="searchField" layoutX="425.0" layoutY="12.0" promptText="Search" styleClass="search-field" />
-            <!-- زر البحث -->
-            <Button fx:id="searchButton" layoutX="756.0" layoutY="11.0" prefHeight="32.0" prefWidth="41.0" styleClass="search-button" text="🔍" />
-            <!-- زر جديد -->
+    <children>
+        <!-- الشريط العلوي -->
+        <AnchorPane prefHeight="53.0" prefWidth="1190.0" style="-fx-background-color: #D1CECE;">
+            <children>
+                <!-- حقل البحث -->
+                <TextField fx:id="searchField" layoutX="425.0" layoutY="12.0" promptText="Search" styleClass="search-field" />
+                <!-- زر البحث -->
+                <Button fx:id="searchButton" layoutX="756.0" layoutY="11.0" prefHeight="32.0" prefWidth="41.0" styleClass="search-button" text="🔍" />
+                <!-- زر جديد -->
 
-        </children>
-    </AnchorPane>
+            </children>
+        </AnchorPane>
 
-    <!-- ScrollPane لتمكين التمرير -->
-    <ScrollPane fx:id="contentArea" layoutY="54.0" prefHeight="677.0" prefWidth="1190.0" hbarPolicy="ALWAYS" vbarPolicy="ALWAYS">
-        <content>
-            <!-- الشبكة لعرض البطاقات -->
-            <GridPane prefHeight="677.0" prefWidth="1190.0" hgap="20.0" vgap="20.0">
-                <columnConstraints>
-                    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" prefWidth="380.0" />
-                    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" prefWidth="380.0" />
-                    <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" prefWidth="380.0" />
-                </columnConstraints>
-
-                <!-- الصف الثالث -->
-                <AnchorPane styleClass="card" GridPane.rowIndex="2" GridPane.columnIndex="0" prefWidth="380.0" prefHeight="250.0">
-                    <children>
-                        <ImageView layoutX="20.0" layoutY="20.0" fitWidth="100.0" fitHeight="100.0">
-                            <image>
-                                <Image url="@../images/add.png" />
-                            </image>
-                        </ImageView>
-                        <Label fx:id="cardTitle7" layoutX="140.0" layoutY="20.0" text="Card 7" styleClass="label" />
-                        <Label fx:id="cardDescription7" layoutX="140.0" layoutY="60.0" text="Description of Card 7" styleClass="description" wrapText="true" prefWidth="220.0" />
-                    </children>
-                </AnchorPane>
-
-                <AnchorPane styleClass="card" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="380.0" prefHeight="250.0">
-                    <children>
-                        <ImageView layoutX="20.0" layoutY="20.0" fitWidth="100.0" fitHeight="100.0">
-                            <image>
-                                <Image url="@../images/add.png" />
-                            </image>
-                        </ImageView>
-                        <Label fx:id="cardTitle8" layoutX="140.0" layoutY="20.0" text="Card 8" styleClass="label" />
-                        <Label fx:id="cardDescription8" layoutX="140.0" layoutY="60.0" text="Description of Card 8" styleClass="description" wrapText="true" prefWidth="220.0" />
-                    </children>
-                </AnchorPane>
-
-                <AnchorPane styleClass="card" GridPane.rowIndex="2" GridPane.columnIndex="2" prefWidth="380.0" prefHeight="250.0">
-                    <children><Label fx:id="agentLabel" text="Agent Name" />
-                        <ImageView layoutX="20.0" layoutY="20.0" fitWidth="100.0" fitHeight="100.0">
-                            <image>
-                                <Image url="@../images/add.png" />
-                            </image>
-                        </ImageView>
-                        <Label fx:id="cardTitle9" layoutX="140.0" layoutY="20.0" text="Card 9" styleClass="label" />
-                        <Label fx:id="cardDescription9" layoutX="140.0" layoutY="60.0" text="Description of Card 9" styleClass="description" wrapText="true" prefWidth="220.0" />
-                    </children>
-                </AnchorPane>
-
-                <!-- الصف الرابع -->
-                <AnchorPane styleClass="card" GridPane.rowIndex="3" GridPane.columnIndex="0" prefWidth="380.0" prefHeight="250.0">
-                    <children>
-                        <ImageView layoutX="20.0" layoutY="20.0" fitWidth="100.0" fitHeight="100.0">
-                            <image>
-                                <Image url="@../images/add.png" />
-                            </image>
-                        </ImageView>
-                        <Label fx:id="cardTitle10" layoutX="140.0" layoutY="20.0" text="Card 10" styleClass="label" />
-                        <Label fx:id="cardDescription10" layoutX="140.0" layoutY="60.0" text="Description of Card 10" styleClass="description" wrapText="true" prefWidth="220.0" />
-                    </children>
-                </AnchorPane>
-            </GridPane>
-        </content>
-    </ScrollPane>
-
-</children>
+        <!-- ScrollPane لتمكين التمرير -->
+        <ScrollPane fx:id="contentArea1" layoutY="54.0" prefHeight="677.0" prefWidth="1190.0" hbarPolicy="NEVER" vbarPolicy="ALWAYS">
+            <content>
+                <!-- الشبكة لعرض البطاقات -->
+                <GridPane fx:id="contentArea" hgap="20.0" vgap="20.0" style="-fx-padding: 10;">
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="380.0" />
+                        <ColumnConstraints prefWidth="380.0" />
+                        <ColumnConstraints prefWidth="380.0" />
+                    </columnConstraints>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </children>
 </AnchorPane>

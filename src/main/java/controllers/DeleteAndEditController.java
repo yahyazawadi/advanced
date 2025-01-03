@@ -16,12 +16,10 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 
-
 public class DeleteAndEditController {
     RealEstateDAOImp realEstateDOAImp = new RealEstateDAOImp();
-
+    private int propertyId;
     @FXML
-
     private Label lb_ID;
     @FXML
     private TextField tv_NameOfProperty;
@@ -45,41 +43,46 @@ public class DeleteAndEditController {
     private ImageView imageView;
     @FXML
     private byte[] imageBytes;
-
+    public void setPropertyId(int propertyId) {
+        this.propertyId = propertyId;
+        initialize();
+    }
     @FXML
     public void initialize() {
-        RealEstate e = realEstateDOAImp.getRealEstateById(18);
-        lb_ID.setText(String.valueOf(e.getId()));
-        lb_ID.setDisable(false);
+        RealEstate e = realEstateDOAImp.getRealEstateById(propertyId);
+        if (e != null) {
+            lb_ID.setText(String.valueOf(e.getId()));
+            tv_City.setText(e.getcity());
+            tv_Price.setText(String.valueOf(e.getPrice()));
+            cb_Type.setValue(e.getType());
+            tv_State.setText(e.getState());
+            tv_Country.setText(e.getCountry());
+            tv_Address.setText(e.getAddress());
+            tv_NameOfProperty.setText(e.getNameOfProperty());
+            tv_ZipCode.setText(e.getZipCode());
+            ta_Description.setText(e.getDescription());
 
-        tv_City.setText(e.getcity());
-        tv_Price.setText(String.valueOf(e.getPrice()));
-        cb_Type.setValue(e.getType());
-        tv_State.setText(e.getState());
-        tv_Country.setText(e.getCountry());
-        tv_Address.setText(e.getAddress());
-        tv_NameOfProperty.setText(e.getNameOfProperty());
-        tv_ZipCode.setText(e.getZipCode());
-        ta_Description.setText(e.getDescription());
-
-        if (e.getImag()!= null) {
-            ByteArrayInputStream inputStream = new ByteArrayInputStream(e.getImag());
-            Image image = new Image(inputStream);
-            imageView.setImage(image);
+            if (e.getImag() != null) {
+                ByteArrayInputStream inputStream = new ByteArrayInputStream(e.getImag());
+                Image image = new Image(inputStream);
+                imageView.setImage(image);
+            }
         } else {
-            System.out.println("No image available for this real estate.");
+            System.out.println("Property not found!");
         }
+
+
     }
 
     @FXML
     public void DeleteRealEstate() {
-        realEstateDOAImp.delete(18);
+        realEstateDOAImp.delete(propertyId);
         System.out.println("Deleted real estate successfully!");
     }
 
     @FXML
     public void saveRealEstateChanges() throws IOException {
-        RealEstate e = realEstateDOAImp.getRealEstateById(18);
+        RealEstate e = realEstateDOAImp.getRealEstateById(propertyId);
 
         String newCity = tv_City.getText();
         String newPrice = tv_Price.getText();
@@ -147,7 +150,7 @@ public class DeleteAndEditController {
 
     @FXML
     public void deleteImage() {
-        RealEstate e = realEstateDOAImp.getRealEstateById(18);
+        RealEstate e = realEstateDOAImp.getRealEstateById(propertyId);
         e.setImag(null);
         realEstateDOAImp.update(e);
         imageView.setImage(null);

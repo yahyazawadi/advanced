@@ -3,13 +3,11 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
+import javafx.scene.layout.BorderPane;
 import main.models.RealEstate;
 
 import java.io.ByteArrayInputStream;
@@ -34,17 +32,14 @@ public class PropertyDetailController {
     private Label zipCodeLabel;
     @FXML
     private Label descriptionText;
-    @FXML
-    private Button backButton; // زر الرجوع
 
     private RealEstate realEstate;
 
-    // Setter method to inject real estate data into the controller
     @FXML
     public void setRealEstate(RealEstate realEstate) {
         this.realEstate = realEstate;
 
-        // تحديث واجهة المستخدم بناءً على البيانات
+        // تحديث البيانات على الواجهة
         if (realEstate.getImag() != null) {
             Image image = new Image(new ByteArrayInputStream(realEstate.getImag()));
             propertyImage.setImage(image);
@@ -59,30 +54,32 @@ public class PropertyDetailController {
         descriptionText.setText(realEstate.getDescription());
     }
 
-    // Called after the FXML is loaded
+
     @FXML
-    private void initialize() {
-        System.out.println("initialize() method called"); // Check if initialize() is executed
-
-
-        backButton.setOnAction(event -> {
-            System.out.println("Back button clicked"); // Debugging line to ensure it's triggered
-            goBackToList();
-        });
-    }
-
-    // Handles the action when the back button is clicked
-    private void goBackToList() {
+    private void goBack() {
         try {
-            // Load the "allproperties.fxml" view when back button is clicked
+            // تحميل واجهة عرض العقارات
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/allproperties.fxml"));
-            Parent listView = loader.load();
+            Parent viewPropertiesView = loader.load();
 
-            // Update the current content with the new view
-            ((AnchorPane) backButton.getScene().getRoot()).getChildren().setAll(listView);
+            // الحصول على الجذر الحالي
+            Parent rootNode = propertyImage.getScene().getRoot();
+
+            if (rootNode instanceof BorderPane) {
+                // إذا كان الجذر الحالي من نوع BorderPane
+                BorderPane borderPane = (BorderPane) rootNode;
+                borderPane.setCenter(viewPropertiesView); // استبدال الجزء الأوسط فقط
+            } else if (rootNode instanceof AnchorPane) {
+                // إذا كان الجذر الحالي من نوع AnchorPane
+                AnchorPane anchorPane = (AnchorPane) rootNode;
+                anchorPane.getChildren().clear();
+                anchorPane.getChildren().add(viewPropertiesView);
+            } else {
+                // إذا كان الجذر نوعًا آخر
+                System.out.println("Unsupported root type: " + rootNode.getClass().getName());
+            }
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Failed to load FXML file.");
         }
     }
 }

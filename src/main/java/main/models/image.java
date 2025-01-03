@@ -3,8 +3,8 @@ package main.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name="imag")
-public class imag {
+@Table(name= "image")
+public class image {
     @Id
     @GeneratedValue
     private int id;

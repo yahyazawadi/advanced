@@ -3,7 +3,6 @@ package controllers;
 
 import main.models.RealEstate;
 import main.services.RealEstateDAOImp;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -43,6 +42,9 @@ public class AddRealEstateController {
     private ImageView imageView;
     @FXML
     private byte[] imageBytes;
+
+
+
 
     @FXML
     public void SaveRealEstate() {
@@ -104,6 +106,3 @@ public class AddRealEstateController {
         imageView.setImage(image);
     }
 }
-
-
-

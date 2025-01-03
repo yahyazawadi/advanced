@@ -10,6 +10,7 @@ import main.util.HibernateUtil;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.List;
 
 
 public class RealEstateDAOImp implements RealEstateDAO {
@@ -54,12 +55,12 @@ public class RealEstateDAOImp implements RealEstateDAO {
     @Override
     public void delete(int id) {
 
-            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-            Session session=sessionFactory.openSession();
-            session.beginTransaction();
-            RealEstate realEstate = session.get(RealEstate.class, id);
-            session.delete(realEstate);
-            session.getTransaction().commit();
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session=sessionFactory.openSession();
+        session.beginTransaction();
+        RealEstate realEstate = session.get(RealEstate.class, id);
+        session.delete(realEstate);
+        session.getTransaction().commit();
 
     }
     @Override
@@ -77,11 +78,11 @@ public class RealEstateDAOImp implements RealEstateDAO {
 
         File selectedFile = fileChooser.showOpenDialog(primaryStage);
 
-           if (selectedFile != null) {
-               uploadImageToDatabase(selectedFile);
-           } else {
-               System.out.println("no images selected");
-           }
+        if (selectedFile != null) {
+            uploadImageToDatabase(selectedFile);
+        } else {
+            System.out.println("no images selected");
+        }
 
 
 
@@ -102,5 +103,29 @@ public class RealEstateDAOImp implements RealEstateDAO {
         } catch (IOException e) {
             System.out.println("failed" + e.getMessage());
         }
+    }
+
+
+    @Override
+    public List<RealEstate> getAllRealEstates() {
+        Session session = null;
+        List<RealEstate> realEstates = null;
+        try {
+            SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+            session = sessionFactory.openSession();
+            session.beginTransaction();
+            realEstates = session.createQuery("FROM RealEstate", RealEstate.class).list();
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            if (session != null && session.getTransaction().isActive()) {
+                session.getTransaction().rollback();
+            }
+            e.printStackTrace(); // Replace with proper logging
+        } finally {
+            if (session != null) {
+                session.close();
+            }
+        }
+        return realEstates;
     }
 }
