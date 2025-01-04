@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.HBox;
 import main.models.Customer;
-import main.services.CustomerDOIAImp;
+import main.services.CustomerDOAImp;
 
 import java.util.List;
 
@@ -42,8 +42,8 @@ public class AllClientController {
     @FXML
     private Button deleteClientButton;
 
-    private final CustomerDOIAImp customerService = new CustomerDOIAImp();
-    private ObservableList<Customer> clientList;
+    private final CustomerDOAImp customerService = new CustomerDOAImp();
+    private ObservableList<Customer> customerList;
 
     @FXML
     public void initialize() {
@@ -120,12 +120,12 @@ public class AllClientController {
 
     private void loadClients() {
         List<Customer> customers = customerService.getAllCustomers();
-        clientList = FXCollections.observableArrayList(customers);
-        clientTable.setItems(clientList);
+        customerList = FXCollections.observableArrayList(customers);
+        clientTable.setItems(customerList);
     }
 
     private void setupSearch() {
-        FilteredList<Customer> filteredData = new FilteredList<>(clientList, p -> true);
+        FilteredList<Customer> filteredData = new FilteredList<>(customerList, p -> true);
 
         searchField.textProperty().addListener((observable, oldValue, newValue) -> {
             filteredData.setPredicate(customer -> {
@@ -151,7 +151,7 @@ public class AllClientController {
             Customer selectedCustomer = clientTable.getSelectionModel().getSelectedItem();
             if (selectedCustomer != null) {
                 customerService.delete(selectedCustomer);
-                clientList.remove(selectedCustomer);
+                customerList.remove(selectedCustomer);
             }
         });
     }

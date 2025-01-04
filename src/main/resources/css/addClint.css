@@ -1,106 +1,47 @@
-/* General Styles */
-.root {
-    -fx-font-family: 'Segoe UI', sans-serif;
+TextField, ComboBox, TextArea {
+    -fx-padding: 10;
     -fx-font-size: 14px;
-    -fx-background-color: #f4f6f9;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-width: 400;
+}
+
+TextField:focused, ComboBox:focused, TextArea:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #f9f9f9;
+}
+
+Button {
+    -fx-background-color: linear-gradient(to right, #030280, #4a90e2);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+Button:hover {
+    -fx-background-color: #4a90e2;
+    -fx-cursor: hand;
+}
+
+Button:pressed {
+    -fx-background-color: #030280;
+}
+
+VBox {
     -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 4);
+    -fx-alignment: center;
 }
 
-/* Main Container Style */
-.main-container {
-    -fx-background-color: #ffffff;
-    -fx-background-radius: 20px;
-    -fx-border-radius: 20px;
-    -fx-border-width: 1px;
-    -fx-border-color: #dddddd;
-    -fx-padding: 30;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.5, 0, 5);
-}
-
-/* Label Styles */
-.label {
-    -fx-text-fill: #555555;
+Label {
+    -fx-alignment: center;
     -fx-font-weight: bold;
 }
 
-/* Input Fields */
-.text-field, .combo-box, .text-area {
-    -fx-background-color: #f9f9f9;
-    -fx-border-color: #dddddd;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-padding: 5;
-}
-
-.text-field:focused, .combo-box:focused, .text-area:focused {
-    -fx-border-color: #3399ff;
-    -fx-background-color: #ffffff;
-}
-
-/* Buttons */
-.button {
-    -fx-background-color: #3399ff;
-    -fx-text-fill: white;
-    -fx-border-radius: 5px;
-    -fx-background-radius: 5px;
-    -fx-padding: 5 15;
-}
-
-.button:hover {
-    -fx-background-color: #2677cc;
-}
-
-.button:pressed {
-    -fx-background-color: #1a5ba1;
-}
-
-.button-cancel {
-    -fx-background-color: #e63946;
-}
-
-.button-cancel:hover {
-    -fx-background-color: #d62828;
-}
-
-/* Notes Field */
-.text-area {
-    -fx-pref-height: 80px;
-}
-
-/* Alignment and Spacing */
-.hbox {
-    -fx-alignment: CENTER_LEFT;
-    -fx-spacing: 15px;
-}
-
-.vbox {
-    -fx-spacing: 20px;
-    -fx-alignment: CENTER;
-}
-
-/* Header Label */
-.header-label {
-    -fx-font-size: 20px;
-    -fx-text-fill: #333333;
-}
-/* CSS للكارد السفلي */
-/* CSS للكارد السفلي */
-VBox {
-    -fx-border-color: gray;
-    -fx-border-width: 1;
-    -fx-border-radius: 15;
-    -fx-background-color: #ffffff;
-    -fx-background-radius: 15;
-    -fx-padding: 30;
-
-    /* تأثير الظل */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);
-
-    /* حركة التكبير عند التمرير */
-    -fx-transition: transform 0.3s ease-in-out;
-}
-
-/* إزالة البوردر الداخلي من العناصر داخل VBox */
-VBox > * {
-    -fx-border-width: 0; /* إزالة البوردر الداخلي */
+HBox {
+    -fx-alignment: center;
 }

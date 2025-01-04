@@ -11,11 +11,11 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 
-public class CustomerDOIAImp  implements CustomerDAO {
+public class CustomerDOAImp implements CustomerDAO {
 
     private final SessionFactory sessionFactory;
 
-    public CustomerDOIAImp() {
+    public CustomerDOAImp() {
         HibernateUtil hibernateUtil = HibernateUtil.getInstance();
         sessionFactory = HibernateUtil.getSessionFactory();
     }
@@ -40,7 +40,7 @@ public class CustomerDOIAImp  implements CustomerDAO {
     public List<Customer> getAllCustomers(){
 
         try (Session session = sessionFactory.openSession()){
-            Query<Customer> query =session.createQuery("FROM Customer ",Customer.class);
+            Query<Customer> query =session.createQuery("FROM Customer ", Customer.class);
             return query.getResultList();
         }
         catch (Exception e){throw new RuntimeException("Error getting all customers",e);}
