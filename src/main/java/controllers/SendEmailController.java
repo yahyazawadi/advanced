@@ -5,12 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import main.services.AgentsDOIAImp;
-import main.interfaces.AgentsDOA;
+import main.services.AgentsDAOImp;
+import main.interfaces.AgentsDAO;
 import main.models.Agents;
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -60,7 +59,7 @@ public class SendEmailController {
     private final String senderEmail = "yousefshubib@gmail.com";
     private final String senderPassword = "hrmg keat urut plhi";
 
-    private AgentsDOA agentsDOA = new AgentsDOIAImp(); // استخدام Hibernate بدلاً من JDBC
+    private AgentsDAO agentsDAO = new AgentsDAOImp(); // استخدام Hibernate بدلاً من JDBC
 
     @FXML
     private VBox emailSection, codeSection, passwordSection; // معرفات الأقسام
@@ -124,7 +123,7 @@ public class SendEmailController {
     }
 
     private boolean isEmailRegistered(String email) {
-        Agents agent = agentsDOA.getAllAgents().stream()
+        Agents agent = agentsDAO.getAllAgents().stream()
                 .filter(a -> a.getEmail().equals(email))
                 .findFirst()
                 .orElse(null);
@@ -202,7 +201,7 @@ public class SendEmailController {
         String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
 
         // تحديث كلمة المرور باستخدام Hibernate
-        agentsDOA.updatePassword(userEmail, hashedPassword);
+        agentsDAO.updatePassword(userEmail, hashedPassword);
 
         showAlert(Alert.AlertType.INFORMATION, "Success", "Password has been updated successfully.");
     }

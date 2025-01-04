@@ -1,5 +1,11 @@
 package controllers;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import main.models.RealEstate;
 import main.services.RealEstateDAOImp;
 import javafx.fxml.FXML;
@@ -8,6 +14,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -156,5 +163,41 @@ public class DeleteAndEditController {
         imageView.setImage(null);
         imageBytes = null;
         System.out.println("Image deleted successfully!");
+    }
+    @FXML
+    private void goBack() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/myproperties.fxml"));
+            Parent viewPropertiesView = loader.load();
+
+
+            ImageView propertyImage = new ImageView(new Image("image.png"));
+            VBox root = new VBox(propertyImage);
+            Scene scene = new Scene(root);
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+
+// الآن يمكن تنفيذ السطر بدون أخطاء
+            Parent rootNode = propertyImage.getScene().getRoot();
+            System.out.println(rootNode.getClass().getSimpleName()); // VBox
+
+
+            if (rootNode instanceof BorderPane) {
+
+                BorderPane borderPane = (BorderPane) rootNode;
+                borderPane.setCenter(viewPropertiesView);
+            } else if (rootNode instanceof AnchorPane) {
+
+                AnchorPane anchorPane = (AnchorPane) rootNode;
+                anchorPane.getChildren().clear();
+                anchorPane.getChildren().add(viewPropertiesView);
+            } else {
+
+                System.out.println("Unsupported root type: " + rootNode.getClass().getName());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

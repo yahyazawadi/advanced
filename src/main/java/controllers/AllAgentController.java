@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import main.models.Agents;
-import main.services.AgentsDOIAImp;
+import main.services.AgentsDAOImp;
 
 import java.util.List;
 
@@ -50,7 +50,7 @@ public class AllAgentController {
     @FXML
     private Button deleteAgent;
 
-    private AgentsDOIAImp agentsService = new AgentsDOIAImp();
+    private AgentsDAOImp agentsService = new AgentsDAOImp();
     private ObservableList<Agents> agentsList = FXCollections.observableArrayList();
 
     @FXML

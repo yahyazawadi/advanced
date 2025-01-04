@@ -6,7 +6,7 @@
 package main.services;
 
 import java.util.List;
-import main.interfaces.AgentsDOA;
+import main.interfaces.AgentsDAO;
 import main.models.Agents;
 import main.util.HibernateUtil;
 import org.hibernate.Session;
@@ -15,10 +15,10 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.mindrot.jbcrypt.BCrypt;
 
-public class AgentsDOIAImp implements AgentsDOA {
+public class AgentsDAOImp implements AgentsDAO {
     private final SessionFactory sessionFactory;
 
-    public AgentsDOIAImp() {
+    public AgentsDAOImp() {
         HibernateUtil hibernateUtil = HibernateUtil.getInstance();
         this.sessionFactory = HibernateUtil.getSessionFactory();
     }

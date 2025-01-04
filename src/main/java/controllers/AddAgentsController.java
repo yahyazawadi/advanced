@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import main.models.Agents;
-import main.services.AgentsDOIAImp;
+import main.services.AgentsDAOImp;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class AddAgentsController {
@@ -24,10 +24,10 @@ public class AddAgentsController {
     @FXML
     private ChoiceBox<String> roleChoiceBox;
 
-    private final AgentsDOIAImp agentsDOIAImp;
+    private final AgentsDAOImp agentsDAOImp;
 
     public AddAgentsController() {
-        this.agentsDOIAImp = new AgentsDOIAImp();
+        this.agentsDAOImp = new AgentsDAOImp();
     }
 
     @FXML
@@ -90,7 +90,7 @@ public class AddAgentsController {
         agents.setCompanyAddress(companyAddress);
 
         try {
-            agentsDOIAImp.save(agents);
+            agentsDAOImp.save(agents);
             showAlert(Alert.AlertType.INFORMATION, "Success", "Agent registered successfully!");
             clearFields();
         } catch (Exception e) {

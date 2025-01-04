@@ -21,7 +21,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import main.MainApp;
 import main.models.Agents;
-import main.services.AgentsDOIAImp;
+import main.services.AgentsDAOImp;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginController {
@@ -37,7 +37,7 @@ public class LoginController {
     private Button btn_login;
     @FXML
     private Button btn_show_password;
-    private final AgentsDOIAImp agentsService = new AgentsDOIAImp();
+    private final AgentsDAOImp agentsService = new AgentsDAOImp();
 
     public LoginController() {
     }
@@ -68,6 +68,7 @@ public class LoginController {
 
     @FXML
     public void handleLogin() {
+
         String username = this.tv_email.getText().trim();
         String password = this.tv_password.isVisible() ? this.tv_password.getText().trim() : this.tv_password_visible.getText().trim();
         if (!username.isEmpty() && !password.isEmpty()) {
@@ -101,6 +102,8 @@ public class LoginController {
         } else {
             this.showAlert(AlertType.ERROR, "Error", "Please fill in both fields.");
         }
+
+
     }
 
     @FXML

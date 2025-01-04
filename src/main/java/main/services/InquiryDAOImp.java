@@ -8,9 +8,9 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import java.util.List;
 
-public class InquiryDAOImpl implements InquiryDAO {
+public class InquiryDAOImp implements InquiryDAO {
 
-    public InquiryDAOImpl() {
+    public InquiryDAOImp() {
         HibernateUtil hibernateUtil = HibernateUtil.getInstance();
         SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
     }

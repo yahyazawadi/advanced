@@ -129,17 +129,15 @@ public class ViewMyPropertiesController {
     @FXML
     private void handleEditButtonAction(int propertyId) {
         try {
-            // Load the DeleteAndEdit.fxml page
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/edit.fxml"));
             Parent editView = loader.load();
 
-            // Get the controller of the loaded page
             DeleteAndEditController controller = loader.getController();
 
-            // Pass the property ID to the controller
+
             controller.setPropertyId(propertyId);
 
-            // Replace the current content with the edit page
+
             contentArea.getChildren().setAll(editView);
         } catch (IOException e) {
             e.printStackTrace();

@@ -4,7 +4,7 @@ package main.interfaces;
 import java.util.List;
 import main.models.Agents;
 
-public interface AgentsDOA {
+public interface AgentsDAO {
     void save(Agents var1);
 
     List<Agents> getAllAgents();

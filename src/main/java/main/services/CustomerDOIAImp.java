@@ -2,7 +2,7 @@ package main.services;
 
 import main.util.HibernateUtil;
 import main.models.Customer;
-import main.interfaces.CustomerDOA;
+import main.interfaces.CustomerDAO;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -11,7 +11,7 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 
-public class CustomerDOIAImp  implements CustomerDOA {
+public class CustomerDOIAImp  implements CustomerDAO {
 
     private final SessionFactory sessionFactory;
 

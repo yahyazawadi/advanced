@@ -43,9 +43,6 @@ public class AddRealEstateController {
     @FXML
     private byte[] imageBytes;
 
-
-
-
     @FXML
     public void SaveRealEstate() {
         RealEstate realEstate = new RealEstate();

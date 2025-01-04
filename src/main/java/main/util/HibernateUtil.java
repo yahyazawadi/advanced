@@ -1,13 +1,10 @@
 package main.util;
 
-import main.models.Agents;
-import main.models.Inquiry;
-import main.models.RealEstate;
+import main.models.*;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import main.models.Customer;
 
 public class HibernateUtil {
 
@@ -21,6 +18,7 @@ public class HibernateUtil {
         configuration.addAnnotatedClass(Agents.class);
         configuration.addAnnotatedClass(Inquiry.class);
         configuration.addAnnotatedClass(RealEstate.class);
+        configuration.addAnnotatedClass(Offer.class);
 
         configuration.configure();
         serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();

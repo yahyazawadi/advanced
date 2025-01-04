@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import main.models.Inquiry;
-import main.services.InquiryDAOImpl;
+import main.services.InquiryDAOImp;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -18,11 +18,11 @@ public class InquiresController {
     @FXML
     private TextField searchField;
 
-    private InquiryDAOImpl inquiryDAO;
+    private InquiryDAOImp inquiryDAO;
 
     @FXML
     public void initialize() {
-        inquiryDAO = new InquiryDAOImpl();
+        inquiryDAO = new InquiryDAOImp();
         loadInquiries();
     }
 

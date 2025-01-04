@@ -3,6 +3,7 @@ package controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -11,9 +12,15 @@ import javafx.scene.layout.BorderPane;
 import main.models.RealEstate;
 
 import java.io.ByteArrayInputStream;
+import java.io.IOException;
 
 public class PropertyDetailController {
 
+
+    @FXML
+    public Button makeOfferButton;
+    @FXML
+    public Button makeInquiryButton;
     @FXML
     private ImageView propertyImage;
     @FXML
@@ -53,8 +60,26 @@ public class PropertyDetailController {
         zipCodeLabel.setText(realEstate.getZipCode());
         descriptionText.setText(realEstate.getDescription());
     }
+    @FXML
+    private void setMakeOfferButton(int propertyId) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/AddOffer.fxml"));
+            Parent editView = loader.load();
+
+            DeleteAndEditController controller = loader.getController();
 
 
+            controller.setPropertyId(propertyId);
+
+
+            //contentArea.getChildren().setAll(editView);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to load the edit page for property ID: " + propertyId);
+        }
+    }
+    @FXML
+    private void makeOffer() {}
     @FXML
     private void goBack() {
         try {
@@ -82,4 +107,5 @@ public class PropertyDetailController {
             e.printStackTrace();
         }
     }
+
 }
