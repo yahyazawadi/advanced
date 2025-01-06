@@ -27,7 +27,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="95">
+                <Text fx:id="landsCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="95">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
@@ -54,7 +54,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="183">
+                <Text fx:id="homesCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="183">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
@@ -81,7 +81,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="32">
+                <Text fx:id="agreementsCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="32">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
@@ -108,7 +108,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="247">
+                <Text fx:id="apartmentsCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="247">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
@@ -132,7 +132,7 @@
                                 <Insets bottom="10.0" top="20.0" />
                             </padding>
                         </Label>
-                        <Label layoutX="74.0" layoutY="65.0" text="Welcome back, Admain" />
+                        <Label layoutX="74.0" layoutY="65.0" text="Welcome back, Admin" />
                     </children></AnchorPane>
             </children>
         </HBox>
@@ -143,7 +143,7 @@
                         <Insets left="16.0" top="14.0" />
                     </VBox.margin>
                 </Label>
-                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../images/agentcolor.png" />
                     </image>
@@ -151,7 +151,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="32">
+                <Text fx:id="agentsCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="32">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
@@ -163,9 +163,9 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="897.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="898.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
-                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Customer">
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Clients">
                     <VBox.margin>
                         <Insets left="16.0" top="14.0" />
                     </VBox.margin>
@@ -178,7 +178,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="1400">
+                <Text fx:id="clientsCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="1400">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>

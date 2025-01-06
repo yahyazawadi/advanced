@@ -18,7 +18,7 @@ import javax.mail.internet.*;
 import java.io.IOException;
 import java.util.*;
 
-public class SendEmailController {
+public class ResetPasswordController {
 
     @FXML
     private Button backButton;
@@ -26,11 +26,9 @@ public class SendEmailController {
     @FXML
     public void handleBackButton() {
         try {
-            // تحميل صفحة تسجيل الدخول
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Login.fxml"));
             Parent loginPage = loader.load();
 
-            // إنشاء مشهد جديد وتعيينه للمرحلة الحالية
             Scene loginScene = new Scene(loginPage);
             Stage currentStage = (Stage) backButton.getScene().getWindow();
             currentStage.setScene(loginScene);
@@ -59,14 +57,13 @@ public class SendEmailController {
     private final String senderEmail = "yousefshubib@gmail.com";
     private final String senderPassword = "hrmg keat urut plhi";
 
-    private AgentsDAO agentsDAO = new AgentsDAOImp(); // استخدام Hibernate بدلاً من JDBC
+    private AgentsDAO agentsDAO = new AgentsDAOImp();
 
     @FXML
-    private VBox emailSection, codeSection, passwordSection; // معرفات الأقسام
+    private VBox emailSection, codeSection, passwordSection;
 
     @FXML
     public void initialize() {
-        // إخفاء الأقسام الثانية والثالثة عند البداية
         codeSection.setVisible(false);
         passwordSection.setVisible(false);
 
@@ -108,13 +105,10 @@ public class SendEmailController {
             sendEmail(email, verificationCode);
 
             userEmail = email;
-            //statusLabel.setText("Verification code sent to " + email);
             statusLabel.setText("Verification code sent to your email");
 
             statusLabel.setTextFill(Color.GREEN);
 
-
-            // إخفاء القسم الأول وعرض القسم الثاني مع إبقاء القسم الأول
             codeSection.setVisible(true);
         } else {
             statusLabel.setText("This email is not registered.");
@@ -174,7 +168,6 @@ public class SendEmailController {
             verificationStatusLabel.setText("Code verified successfully!");
             verificationStatusLabel.setTextFill(Color.GREEN);
 
-            // إخفاء القسم الثاني وعرض القسم الثالث مع إبقاء القسم الأول
             passwordSection.setVisible(true);
         } else {
             verificationStatusLabel.setText("Invalid code. Please try again.");
@@ -200,7 +193,6 @@ public class SendEmailController {
 
         String hashedPassword = BCrypt.hashpw(newPassword, BCrypt.gensalt());
 
-        // تحديث كلمة المرور باستخدام Hibernate
         agentsDAO.updatePassword(userEmail, hashedPassword);
 
         showAlert(Alert.AlertType.INFORMATION, "Success", "Password has been updated successfully.");

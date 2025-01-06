@@ -12,7 +12,7 @@ import javafx.event.ActionEvent;
 
 import java.io.IOException;
 
-public class AdminNavBarController {
+public class AgentSideBarController {
 
     // Define buttons matching FXML fx:id
     @FXML
@@ -28,15 +28,23 @@ public class AdminNavBarController {
     public Button newClientButton;
 
     @FXML
-    public Button clientsButton;
+    public Button myclientsButton;
 
     @FXML
-    public Button newagent;
+    public Button sentPropertyInquiriesButton;
 
     @FXML
-    public Button viewagents;
+    public Button receivedPropertyInquiriesButton;
     @FXML
     public Button login;
+    @FXML
+    public Button viewmyPropertiesButton;
+    @FXML
+    public Button viewallPropertiesButton;
+    @FXML
+    public Button sentPropertyOffersButton;
+    @FXML
+    public Button receivedPropertyOffersButton;
 
     @FXML
     private HBox contentArea;  // Add reference to content area (HBox) in your FXML
@@ -50,24 +58,28 @@ public class AdminNavBarController {
         login.setOnAction(this::login);
         dashboardButton.setOnAction(this::handleDashboardButton);
         newPropertiesButton.setOnAction(this::handleAddProperties);
-        viewPropertiesButton.setOnAction(this::handleViewProperties);
         newClientButton.setOnAction(this::handleAddClient);
-        clientsButton.setOnAction(this::handleViewClients);
-        newagent.setOnAction(this::newagentbutton);
-        viewagents.setOnAction(this::viewagentsbutton);
-
+        myclientsButton.setOnAction(this::handleViewMyClients);
+        viewallPropertiesButton.setOnAction(this::handleViewAllProperties);
+        viewmyPropertiesButton.setOnAction(this::handleViewMyProperties);
         // Initial page load (optional, you can load any default page here)
-        loadPage("/fxml/AdminDashBoard.fxml");
+        loadPage("/fxml/AgentDashboard.fxml");
+    }
+
+    private void handleViewMyProperties(ActionEvent actionEvent) {loadPage("/fxml/myproperties.fxml");
+    }
+
+    private void handleViewAllProperties(ActionEvent actionEvent) { loadPage("/fxml/allproperties.fxml");
     }
 
     @FXML
-    private void newagentbutton(ActionEvent actionEvent) {
-        loadPage("/fxml/AddAgents.fxml");
+    private void handleViewInquiries(ActionEvent actionEvent) {
+        loadPage("/fxml/ReceivedInquries.fxml");
     }
 
     @FXML
-    private void viewagentsbutton(ActionEvent actionEvent) {
-        loadPage("/fxml/allAgent.fxml");
+    private void handlePropertyInquiries(ActionEvent actionEvent) {
+        loadPage("/fxml/SentInquries.fxml");
     }
 
     /**
@@ -90,32 +102,27 @@ public class AdminNavBarController {
 
     // Individual button handlers
     public void handleDashboardButton(ActionEvent event) {
-        loadPage("/fxml/AdminDashBoard.fxml");
+        loadPage("/fxml/AgentDashboard.fxml");
     }
 
     public void handleAddProperties(ActionEvent event) {
-        loadPage("/fxml/AddProperties.fxml");
+        loadPage("/fxml/AddRealEstate.fxml");
     }
 
     public void handleViewProperties(ActionEvent event) {
-        loadPage("/fxml/MyProperties.fxml");
+        loadPage("/fxml/PropertyDetail.fxml");
     }
 
     public void handleAddClient(ActionEvent event) {
-        loadPage("/fxml/AddClient.fxml");
+        loadPage("/fxml/AddCustomer.fxml");
     }
 
-    public void handleViewClients(ActionEvent event) {
+    public void handleViewMyClients(ActionEvent event) {
         loadPage("/fxml/AllCustomers.fxml");
     }
 
-    public void handlePropertyInquiriesButton(ActionEvent event) {
-        loadPage("/fxml/PropertyInquiries.fxml");
-    }
 
-    public void handleMyPropertyInquiriesButton(ActionEvent event) {
-        loadPage("/fxml/MyPropertyInquiries.fxml");
-    }
+
 
     public void login(ActionEvent actionEvent) {
         try {
@@ -128,7 +135,6 @@ public class AdminNavBarController {
             loginStage.setScene(new Scene(loginRoot));
             loginStage.show();
 
-
             // Close the current stage (navbar page)
             Stage currentStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             currentStage.close();
@@ -138,4 +144,11 @@ public class AdminNavBarController {
         }
     }
 
+    public void handleReceivedPropertyOffers(ActionEvent actionEvent) {
+        loadPage(    "/fxml/ReceivedOffers.fxml");
+    }
+
+    public void handleSentPropertyOffers(ActionEvent actionEvent) {
+        loadPage(    "/fxml/SentOffers.fxml");
+    }
 }

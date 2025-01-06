@@ -48,7 +48,7 @@ public class LoginController {
     }
 
     public void handleForgetPassword(ActionEvent actionEvent) {
-        this.loadNewPage("/fxml/SendEmail.fxml");
+        this.loadNewPage("/fxml/ResetPassword.fxml");
     }
 
     public void loadNewPage(String fxmlFile) {

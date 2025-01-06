@@ -27,7 +27,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="95">
+                <Text fx:id="landsCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="95">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
@@ -56,7 +56,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="183">
+                <Text fx:id="homesCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="183">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
@@ -84,7 +84,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="32">
+                <Text fx:id="agreementsCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="32">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>
@@ -111,7 +111,7 @@
                         <Insets left="270.0" top="-35.0" />
                     </VBox.margin>
                 </ImageView>
-                <Text style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="247">
+                <Text fx:id="apartmentsCounter" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-fill: #0C067E;" text="247">
                     <VBox.margin>
                         <Insets left="16.0" top="9.0" />
                     </VBox.margin>

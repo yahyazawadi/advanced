@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <?import javafx.scene.image.ImageView?>
-<GridPane hgap="10" style="-fx-padding: 20; -fx-background-color: #f5f5f5;" vgap="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.real_estate_application.HelloControllerAdd">
+<GridPane hgap="10" style="-fx-padding: 20; -fx-background-color: #f5f5f5;" vgap="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddRealEstateController">
 
     <VBox style="-fx-background-color: #ffffff; -fx-padding: 10; -fx-spacing: 20;" GridPane.columnIndex="0">
         <Label style="-fx-font-size: 24px; -fx-text-fill: #1e90ff;" text="TMS" />
