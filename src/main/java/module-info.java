@@ -26,6 +26,6 @@ module main.MainApp {
     // Export the main package so it can be used externally
     exports main;
     exports main.interfaces;
-    exports main.services;
+    exports main.imp;
     exports main.models;
 }

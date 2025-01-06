@@ -1,66 +1,93 @@
 
 package controllers;
 
-import javafx.scene.image.Image;
-import javafx.stage.Stage;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import main.interfaces.OfferDAO;
 import main.models.Offer;
-import main.models.RealEstate;
-import main.services.OfferDAOImp;
+import main.imp.OfferDAOImp;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
-import java.io.ByteArrayInputStream;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 
 public class AddOfferController {
-    private final OfferDAO offerDAO = new OfferDAOImp();
-
+    private OfferDAOImp offerDAOImp = new OfferDAOImp();
+    public Button btnSubmitOffer;
+    private String email;
+private  int AgentId;
     @FXML
     public Label lb_PropertyId;
     @FXML
-    public Label lb_ClientId;
+    public TextField tv_ClientId;
+    /*
     @FXML
     public Label lb_AgentId;
+
+     */
+    @FXML
+    public TextField ta_email;
     @FXML
     public ComboBox<String> cb_OfferType;
     @FXML
     public TextArea ta_Details;
     @FXML
+    public GridPane offerContentArea;
+    @FXML
+    public VBox contentArea;
+
+
+    //public VBox offerContentArea;
+    @FXML
     private TextField tv_FinalPrice;
     @FXML
     private Label lb_offerID;
-    public void seIds(Label propertyId,Label AgentId ) {
-        this.lb_PropertyId = propertyId;
-        this.lb_AgentId = AgentId;
+    public void setEmail(String email) {
+        //offerDAO.lb_email.setText(email);
+        this.email=email;
+        //this.propertyId = propertyId;// Set the email label in AddOfferController
+    }
+
+    public void setUserId(String AgentId) {
+        //offerDAO.lb_AgentId.setText(userId);
+        this.AgentId= Integer.parseInt(AgentId);// Set the user ID label in AddOfferController
+    }
+    public void setPropertyId(int propertyId) {
+        ta_email.setText(UserSession.getInstance().getEmail());
+        //lb_AgentId.setText(String.valueOf(UserSession.getInstance().getUserId()));
+        this.lb_PropertyId.setText(String.valueOf(propertyId));
+//      this.lb_email.setText(email);
+  //    this.lb_AgentId.setText(String.valueOf(AgentId));
         initialize();
     }
 
     @FXML
     public void initialize() {
 
-
-                Label propertyId = lb_PropertyId;
-                Label AgentId=lb_AgentId;
+     Label propertyId = lb_PropertyId;
+    // Label AgentId=lb_AgentId;
 
     }
     @FXML
     public void SaveOffer() {
         Offer offer = new Offer();
-        offer.setClientId(Integer.parseInt(lb_ClientId.getText()));
+        offer.setClientId(Integer.parseInt(tv_ClientId.getText()));
         offer.setOfferId(Integer.parseInt(lb_PropertyId.getText()));
-        offer.setPropertyId(Integer.parseInt(lb_offerID.getText()));
-        offer.setAgentId(Integer.parseInt(lb_AgentId.getText()));
+       // offer.setPropertyId(Integer.parseInt(lb_offerID.getText()));
+        //offer.setAgentId(Integer.parseInt(_AgentId.getText()));
         offer.setFinalPrice(Integer.parseInt(tv_FinalPrice.getText()));
         offer.setOfferType(cb_OfferType.getValue());
         offer.setDetails(ta_Details.getText());
 
         // Call the save method using the instance of OfferDAOImp
-        offerDAO.save(offer);
+        offerDAOImp.save(offer);
 
         System.out.println("Offer saved successfully!");
     }
+
+    public GridPane getOfferContentArea() {
+        return this.offerContentArea;
+    }
+
 
 
 }

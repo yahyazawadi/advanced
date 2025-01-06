@@ -1,13 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewMyPropertiesController"
-            prefHeight="730.0" prefWidth="1190.0" stylesheets="@../css/home.css">
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1190.0" stylesheets="@../css/home.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controllers.ViewMyPropertiesController">
 
     <children>
         <!-- الشريط العلوي -->
@@ -23,17 +24,20 @@
         </AnchorPane>
 
         <!-- ScrollPane لتمكين التمرير -->
-        <ScrollPane fx:id="contentArea1" layoutY="54.0" prefHeight="677.0" prefWidth="1190.0" hbarPolicy="NEVER" vbarPolicy="ALWAYS">
+        <ScrollPane fx:id="contentArea1" hbarPolicy="NEVER" layoutY="54.0" prefHeight="677.0" prefWidth="1190.0" vbarPolicy="ALWAYS">
             <content>
                 <!-- الشبكة لعرض البطاقات -->
-                <GridPane fx:id="contentArea" hgap="20.0" vgap="20.0" style="-fx-padding: 10;">
+                <GridPane fx:id="contentArea" hgap="20.0" style="-fx-padding: 10;" vgap="20.0">
                     <columnConstraints>
                         <ColumnConstraints prefWidth="380.0" />
                         <ColumnConstraints prefWidth="380.0" />
                         <ColumnConstraints prefWidth="380.0" />
 
                     </columnConstraints>
-                    <Button fx:id="editButton" layoutX="140.0" layoutY="120.0" text="Edit" styleClass="edit-button"/>
+
+               <rowConstraints>
+                  <RowConstraints />
+               </rowConstraints>
                 </GridPane>
             </content>
         </ScrollPane>

@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane xmlns:fx="http://javafx.com/javafx"
+            fx:id="contentArea"
             fx:controller="controllers.PropertyDetailController"
             prefHeight="730.0" prefWidth="800.0" stylesheets="@../css/home.css">
     <children>
@@ -45,8 +46,6 @@
 
                 <Button fx:id="makeOfferButton" layoutX="200.0" layoutY="600.0" text="Make an Offer"
                         style="-fx-font-size: 16px; -fx-background-color: #4CAF50; -fx-text-fill: white;" />
-                <Button fx:id="makeInquiryButton" layoutX="400.0" layoutY="600.0" text="Make an Inquiry"
-                        style="-fx-font-size: 16px; -fx-background-color: #2196F3; -fx-text-fill: white;" />
             </children>
         </AnchorPane>
     </children>

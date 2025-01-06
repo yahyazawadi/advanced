@@ -7,30 +7,36 @@ import javax.persistence.*;
 public class Offer {
     @Id
     @GeneratedValue
-    @Column(name = "offerId")
-    int offerId;
+    @Column(name = "offerId", nullable = false, unique = true)
+    private int offerId;
     @Column(name = "propertyId")
-    int propertyId;
+     private  int propertyId;
     @Column(name = "clientId")
-    int clientId;
+    private int clientId;
     @Column(name = "agentId")
-    int agentId;
+    private int agentId;
     @Column(name = "offerType")
-    String offerType;
+    private String offerType;
     @Column(name = "details")
-    String details;
+    private String details;
     @Column(name = "FinalPrice")
-    int FinalPrice;
-    @Column(name = "made_at")
-    String made_at;
+    private int FinalPrice;
+
+    @Column(name = "agent_email")
+    private String agent_email;
+
+    public String getAgent_email() {
+        return agent_email;
+    }
+
+    public void setAgent_email(String agent_email) {
+        this.agent_email = agent_email;
+    }
 
     public int getFinalPrice() {
         return FinalPrice;
     }
 
-    public String getMade_at() {
-        return made_at;
-    }
 
     public String getDetails() {
         return details;
@@ -60,9 +66,6 @@ public class Offer {
         this.offerId = offerId;
     }
 
-    public void setMade_at(String made_at) {
-        this.made_at = made_at;
-    }
 
     public void setFinalPrice(int finalPrice) {
         FinalPrice = finalPrice;

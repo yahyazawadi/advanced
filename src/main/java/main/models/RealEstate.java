@@ -10,8 +10,6 @@ public class RealEstate {
     @GeneratedValue
     @Column(name = "id", nullable = false, unique = true)
     private int id;
-
-
     @Column(name = "nameOfProperty")
     private String NameOfProperty;
     @Column(name= "country")

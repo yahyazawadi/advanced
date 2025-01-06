@@ -78,7 +78,7 @@ public class AgentNavBarController {
 
     @FXML
     private void handleViewInquiries(ActionEvent actionEvent) {
-        loadPage("/fxml/ReceivedInquries.fxml");
+        loadPage("/fxml/Inquiries.fxml");
     }
 
     @FXML
@@ -110,7 +110,7 @@ public class AgentNavBarController {
     }
 
     public void handleAddProperties(ActionEvent event) {
-        loadPage("/fxml/Add_real_estate.fxml");
+        loadPage("/fxml/AddOffer.fxml");
     }
 
     public void handleViewProperties(ActionEvent event) {

@@ -1,19 +1,17 @@
 package controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import main.models.RealEstate;
-import main.services.RealEstateDAOImp;
+import main.imp.RealEstateDAOImp;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -101,7 +99,7 @@ public class ViewPropertiesController {
             Image image = new Image(new ByteArrayInputStream(realEstate.getImag()));
             imageView.setImage(image);
         } else {
-            imageView.setImage(new Image("file:../images/placeholder.png")); // صورة افتراضية
+            imageView.setImage(new Image(getClass().getResource("/images/placeholder.png").toExternalForm()));
         }
         imageView.setLayoutX(10);  // تعيين الصورة بحيث تأخذ المسافة من الجوانب
         imageView.setLayoutY(0);  // وضع الصورة في الجزء العلوي من البطاقة
@@ -145,7 +143,9 @@ public class ViewPropertiesController {
 
             // تمرير بيانات العقار
             loader.<PropertyDetailController>getController().setRealEstate(realEstate);
-
+            // Update the contentArea with the new detail view
+           // contentArea.getChildren().clear();
+            contentArea.getChildren().add(detailView);
             // تحديث محتوى الصفحة
             contentArea.getChildren().setAll(detailView);
         } catch (Exception e) {

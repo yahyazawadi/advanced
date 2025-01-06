@@ -1,4 +1,4 @@
-package main.services;
+package main.imp;
 
 import main.interfaces.InquiryDAO;
 import main.models.Inquiry;

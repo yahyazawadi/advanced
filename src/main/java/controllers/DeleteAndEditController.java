@@ -7,7 +7,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import main.models.RealEstate;
-import main.services.RealEstateDAOImp;
+import main.imp.RealEstateDAOImp;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -16,8 +16,6 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;

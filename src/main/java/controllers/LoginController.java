@@ -21,7 +21,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 import main.MainApp;
 import main.models.Agents;
-import main.services.AgentsDAOImp;
+import main.imp.AgentsDAOImp;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class LoginController {

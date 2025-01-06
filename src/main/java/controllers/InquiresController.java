@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import main.models.Inquiry;
-import main.services.InquiryDAOImp;
+import main.imp.InquiryDAOImp;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

@@ -1,4 +1,4 @@
-package main.services;
+package main.imp;
 
 import main.util.HibernateUtil;
 import main.models.Customer;

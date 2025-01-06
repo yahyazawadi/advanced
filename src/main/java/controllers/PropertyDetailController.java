@@ -10,15 +10,19 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import main.models.RealEstate;
+import main.models.Agents;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
 public class PropertyDetailController {
 
-
+    @FXML
+    public AnchorPane contentArea;
     @FXML
     public Button makeOfferButton;
+
+
     @FXML
     public Button makeInquiryButton;
     @FXML
@@ -59,48 +63,76 @@ public class PropertyDetailController {
         cityLabel.setText(realEstate.getcity());
         zipCodeLabel.setText(realEstate.getZipCode());
         descriptionText.setText(realEstate.getDescription());
+        makeOfferButton.setOnAction(event -> handleOfferButtonAction(realEstate.getId()));
     }
+
     @FXML
-    private void setMakeOfferButton(int propertyId) {
+    private void handleOfferButtonAction(int propertyId) {
         try {
+            // Load AddOffer.fxml into a Parent container
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/AddOffer.fxml"));
+            Parent offerview = loader.load();
+
+            // Get AddOfferController instance from the loader
+            AddOfferController controller = loader.getController();
+
+            // Set the property ID in the AddOfferController
+            controller.setPropertyId(propertyId);
+            System.out.println("loaded the offer page for property ID: " + propertyId);
+
+            // Assuming you have a content area in the current page to load the new content
+            // (it could be a GridPane, VBox, or any other container)
+            contentArea.getChildren().clear(); // Clear the previous content
+            contentArea.getChildren().setAll(offerview); // Add the new content (from AddOffer.fxml)
+
+            // Alternatively, if the contentArea itself is the root container, use setRoot():
+            // ((BorderPane) rootPane).setCenter(offerview);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to load the offer page for property ID: " + propertyId);
+        }
+    }
+
+    @FXML
+    private void handleEditButtonAction(int propertyId) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/edit.fxml"));
             Parent editView = loader.load();
 
             DeleteAndEditController controller = loader.getController();
 
-
             controller.setPropertyId(propertyId);
 
+            contentArea.getChildren().setAll(editView);
 
-            //contentArea.getChildren().setAll(editView);
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Failed to load the edit page for property ID: " + propertyId);
         }
     }
-    @FXML
-    private void makeOffer() {}
+
+
+
+
     @FXML
     private void goBack() {
         try {
-            // تحميل واجهة عرض العقارات
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/allproperties.fxml"));
             Parent viewPropertiesView = loader.load();
 
-            // الحصول على الجذر الحالي
             Parent rootNode = propertyImage.getScene().getRoot();
 
             if (rootNode instanceof BorderPane) {
-                // إذا كان الجذر الحالي من نوع BorderPane
+
                 BorderPane borderPane = (BorderPane) rootNode;
-                borderPane.setCenter(viewPropertiesView); // استبدال الجزء الأوسط فقط
+                borderPane.setCenter(viewPropertiesView);
             } else if (rootNode instanceof AnchorPane) {
-                // إذا كان الجذر الحالي من نوع AnchorPane
                 AnchorPane anchorPane = (AnchorPane) rootNode;
                 anchorPane.getChildren().clear();
                 anchorPane.getChildren().add(viewPropertiesView);
             } else {
-                // إذا كان الجذر نوعًا آخر
                 System.out.println("Unsupported root type: " + rootNode.getClass().getName());
             }
         } catch (Exception e) {

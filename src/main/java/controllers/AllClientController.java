@@ -12,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.HBox;
 import main.models.Customer;
-import main.services.CustomerDOAImp;
+import main.imp.CustomerDOAImp;
 
 import java.util.List;
 

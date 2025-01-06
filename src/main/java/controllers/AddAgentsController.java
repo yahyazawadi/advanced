@@ -4,7 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import main.models.Agents;
-import main.services.AgentsDAOImp;
+import main.imp.AgentsDAOImp;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class AddAgentsController {

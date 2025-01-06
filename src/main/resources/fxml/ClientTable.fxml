@@ -5,15 +5,13 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.layout.HBox?>
 <?import javafx.geometry.Insets?>
-
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<BorderPane stylesheets="@../css/ClientTable.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientTableController">
+<BorderPane stylesheets="@../css/ClientTable.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AllClientController">
     <top>
         <!-- استخدام StackPane لتوسيط النص في الجزء العلوي -->
         <StackPane>
@@ -26,7 +24,6 @@
             <TextField fx:id="searchField" promptText="Search by name, email, or phone number" style="-fx-pref-width: 300;" />
             <TableView fx:id="clientTable" style="-fx-pref-width: 800;">
                 <columns>
-                    <TableColumn fx:id="offerIdCol" text="Offer ID" />
                     <TableColumn fx:id="propertyIdCol" text="Property ID" />
                     <TableColumn fx:id="clientIdCol" text="Client ID" />
                     <TableColumn fx:id="agentIdCol" text="Agent ID" />

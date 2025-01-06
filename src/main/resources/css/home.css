@@ -152,6 +152,8 @@
     -fx-border-radius: 5; /* زوايا دائرية */
     -fx-background-radius: 5;
     -fx-padding: 5 10; /* مسافة داخلية */
+
+    top: 300%;
 }
 
 .card .delete-button {

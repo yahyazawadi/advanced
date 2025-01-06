@@ -2,7 +2,7 @@
 package controllers;
 
 import main.models.RealEstate;
-import main.services.RealEstateDAOImp;
+import main.imp.RealEstateDAOImp;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;

@@ -5,6 +5,8 @@
 
 package main.models;
 
+import javafx.scene.control.Label;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.persistence.Column;
@@ -65,6 +67,11 @@ public class Agents {
 
     public Agents() {
     }
+
+    public char[] getAgent_email() {
+        return this.email.toCharArray();
+    }
+
 
     public String getId() {
         return this.id;
@@ -149,4 +156,5 @@ public class Agents {
     public void setCompanyAddress(String companyAddress) {
         this.companyAddress = companyAddress;
     }
+
 }

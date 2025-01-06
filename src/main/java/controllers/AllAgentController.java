@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import main.models.Agents;
-import main.services.AgentsDAOImp;
+import main.imp.AgentsDAOImp;
 
 import java.util.List;
 

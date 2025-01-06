@@ -5,7 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import main.models.Customer;
-import main.services.CustomerDOAImp;
+import main.imp.CustomerDOAImp;
 
 public class AddClientController {
     public Button saveButton;

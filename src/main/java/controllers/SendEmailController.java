@@ -8,7 +8,7 @@ import javafx.scene.control.*;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import main.services.AgentsDAOImp;
+import main.imp.AgentsDAOImp;
 import main.interfaces.AgentsDAO;
 import main.models.Agents;
 import org.mindrot.jbcrypt.BCrypt;

@@ -1,6 +1,5 @@
 package controllers;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -11,8 +10,9 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import main.models.RealEstate;
-import main.services.RealEstateDAOImp;
+import main.imp.RealEstateDAOImp;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -20,6 +20,8 @@ import java.util.List;
 
 public class ViewMyPropertiesController {
 
+    @FXML
+    private VBox offerContentArea;
     @FXML
     private GridPane contentArea;
     private Button backButton;
@@ -119,12 +121,25 @@ public class ViewMyPropertiesController {
         // Attach the handleEditButtonAction function
         editButton.setOnAction(event -> handleEditButtonAction(realEstate.getId()));
 
+        // Inquiries Button
+        Button inquiriesButton = new Button("Inquiries");
+        inquiriesButton.setStyle("-fx-font-size: 14px; -fx-background-color: #2196F3; -fx-text-fill: #FFFFFF;");
+        inquiriesButton.setLayoutX(100); // Position it next to the Edit button
+        inquiriesButton.setLayoutY(50);
+
+        // Attach the handleInquiriesButtonAction function
 
         // Add components to the card
-        card.getChildren().addAll(imageView, titleLabel, editButton);
+        card.getChildren().addAll(imageView, titleLabel, editButton, inquiriesButton);
 
         return card;
     }
+
+
+
+
+
+
 
     @FXML
     private void handleEditButtonAction(int propertyId) {
@@ -147,20 +162,7 @@ public class ViewMyPropertiesController {
 
 
 
-    private void openPropertyDetail(RealEstate realEstate) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/PropertyDetail.fxml"));
-            Parent detailView = loader.load();
 
-            // تمرير بيانات العقار
-            loader.<PropertyDetailController>getController().setRealEstate(realEstate);
-
-            // تحديث محتوى الصفحة
-            contentArea.getChildren().setAll(detailView);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
 
 
