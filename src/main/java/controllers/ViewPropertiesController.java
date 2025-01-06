@@ -18,7 +18,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class ViewPropertiesController {
-
+    @FXML
+    public AnchorPane todeleteArea;
     @FXML
     private GridPane contentArea;
     private Button backButton;
@@ -145,9 +146,9 @@ public class ViewPropertiesController {
             loader.<PropertyDetailController>getController().setRealEstate(realEstate);
             // Update the contentArea with the new detail view
            // contentArea.getChildren().clear();
-            contentArea.getChildren().add(detailView);
+            todeleteArea.getChildren().add(detailView);
             // تحديث محتوى الصفحة
-            contentArea.getChildren().setAll(detailView);
+            todeleteArea.getChildren().setAll(detailView);
         } catch (Exception e) {
             e.printStackTrace();
         }

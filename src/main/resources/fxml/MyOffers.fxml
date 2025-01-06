@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReceivedOffersController">
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MyOffersController">
     <top>
         <StackPane>
             <Label style="-fx-font-size: 18; -fx-font-weight: bold;" textFill="#030280" text="My received Offers" />
@@ -31,12 +31,11 @@
                     <TableColumn fx:id="offerIdColumn" text="Offer ID" minWidth="100" maxWidth="150" />
                     <TableColumn fx:id="propertyIdColumn" text="Property ID" minWidth="100" maxWidth="150" />
                     <TableColumn fx:id="clientIdColumn" text="Client ID" minWidth="100" maxWidth="150" />
-                    <TableColumn fx:id="agentIdColumn" text="Agent ID" minWidth="100" maxWidth="150" />
+                    <TableColumn fx:id="agentIdColumn" text="Agent email" minWidth="100" maxWidth="150" />
                     <TableColumn fx:id="offerTypeColumn" text="Offer Type" minWidth="150" maxWidth="200" />
                     <TableColumn fx:id="detailsColumn" text="Details" minWidth="200" maxWidth="300" />
-                    <TableColumn fx:id="statusColumn" text="Status" minWidth="100" maxWidth="150" />
                     <TableColumn fx:id="finalPriceColumn" text="Final Price" minWidth="100" maxWidth="150" />
-                    <TableColumn fx:id="madeAtColumn" text="Made At" minWidth="150" maxWidth="200" />
+
                 </columns>
             </TableView>
         </VBox>

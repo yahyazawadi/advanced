@@ -149,7 +149,7 @@ public class AgentNavBarController {
     }
 
     public void handleReceivedPropertyOffers(ActionEvent actionEvent) {
-        loadPage(    "/fxml/ReceivedOffers.fxml");
+        loadPage("/fxml/MyOffers.fxml");
     }
 
     public void handleSentPropertyOffers(ActionEvent actionEvent) {

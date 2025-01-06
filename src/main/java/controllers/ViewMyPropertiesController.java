@@ -19,7 +19,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class ViewMyPropertiesController {
-
+    @FXML
+    public AnchorPane todeleteArea;
     @FXML
     private VBox offerContentArea;
     @FXML
@@ -122,19 +123,37 @@ public class ViewMyPropertiesController {
         editButton.setOnAction(event -> handleEditButtonAction(realEstate.getId()));
 
         // Inquiries Button
-        Button inquiriesButton = new Button("Inquiries");
-        inquiriesButton.setStyle("-fx-font-size: 14px; -fx-background-color: #2196F3; -fx-text-fill: #FFFFFF;");
-        inquiriesButton.setLayoutX(100); // Position it next to the Edit button
-        inquiriesButton.setLayoutY(50);
+        Button MyOffersButton = new Button("Offers");
+        MyOffersButton.setStyle("-fx-font-size: 14px; -fx-background-color: #2196F3; -fx-text-fill: #FFFFFF;");
+        MyOffersButton.setLayoutX(100); // Position it next to the Edit button
+        MyOffersButton.setLayoutY(50);
 
         // Attach the handleInquiriesButtonAction function
-
+        MyOffersButton.setOnAction(event -> handleOfferButtonAction(realEstate.getId()));
         // Add components to the card
-        card.getChildren().addAll(imageView, titleLabel, editButton, inquiriesButton);
+        card.getChildren().addAll(imageView, titleLabel, editButton, MyOffersButton);
 
         return card;
     }
 
+    @FXML
+    private void handleOfferButtonAction(int propertyId) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/myOffers.fxml"));
+            Parent offerView = loader.load();
+
+            MyOffersController controller = loader.getController();
+
+
+            controller.setPropertyId(propertyId);
+
+
+            todeleteArea.getChildren().setAll(offerView);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Failed to load the edit page for property ID: " + propertyId);
+        }
+    }
 
 
 
@@ -153,7 +172,7 @@ public class ViewMyPropertiesController {
             controller.setPropertyId(propertyId);
 
 
-            contentArea.getChildren().setAll(editView);
+            todeleteArea.getChildren().setAll(editView);
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Failed to load the edit page for property ID: " + propertyId);

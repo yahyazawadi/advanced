@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Table(name= "offer")
 public class Offer {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "offerId", nullable = false, unique = true)
     private int offerId;
     @Column(name = "propertyId")
@@ -24,7 +24,9 @@ public class Offer {
 
     @Column(name = "agent_email")
     private String agent_email;
-
+    public Offer() {
+        // Required by JPA
+    }
     public String getAgent_email() {
         return agent_email;
     }

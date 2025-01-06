@@ -65,24 +65,37 @@ private  int AgentId;
 
      Label propertyId = lb_PropertyId;
     // Label AgentId=lb_AgentId;
-
+        btnSubmitOffer.setOnAction(event -> SaveOffer());
+        System.out.println("inside init");
     }
     @FXML
     public void SaveOffer() {
-        Offer offer = new Offer();
-        offer.setClientId(Integer.parseInt(tv_ClientId.getText()));
-        offer.setOfferId(Integer.parseInt(lb_PropertyId.getText()));
-       // offer.setPropertyId(Integer.parseInt(lb_offerID.getText()));
-        //offer.setAgentId(Integer.parseInt(_AgentId.getText()));
-        offer.setFinalPrice(Integer.parseInt(tv_FinalPrice.getText()));
-        offer.setOfferType(cb_OfferType.getValue());
-        offer.setDetails(ta_Details.getText());
+        try {
+            System.out.println("inside save offer in controller");
+            if (tv_ClientId.getText().isEmpty() || tv_FinalPrice.getText().isEmpty() || cb_OfferType.getValue() == null) {
+                System.out.println("All fields are required.");
+                return;
+            }
 
-        // Call the save method using the instance of OfferDAOImp
-        offerDAOImp.save(offer);
+            Offer offer = new Offer();
+            offer.setClientId(Integer.parseInt(tv_ClientId.getText()));
+            offer.setPropertyId(Integer.parseInt(lb_PropertyId.getText())); // Ensure PropertyId is set
+            //offer.setAgentId(this.AgentId);
+            offer.setFinalPrice(Integer.parseInt(tv_FinalPrice.getText()));
+            offer.setOfferType(cb_OfferType.getValue());
+            offer.setDetails(ta_Details.getText());
+            offer.setAgent_email(email); // Use the provided email
 
-        System.out.println("Offer saved successfully!");
+            offerDAOImp.save(offer);
+
+            System.out.println("Offer saved successfully!");
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input: " + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Error saving offer: " + e.getMessage());
+        }
     }
+
 
     public GridPane getOfferContentArea() {
         return this.offerContentArea;
