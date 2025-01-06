@@ -1,0 +1,47 @@
+TextField, ComboBox, TextArea {
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-pref-width: 400;
+}
+
+TextField:focused, ComboBox:focused, TextArea:focused {
+    -fx-border-color: #4a90e2;
+    -fx-background-color: #f9f9f9;
+}
+
+Button {
+    -fx-background-color: linear-gradient(to right, #030280, #4a90e2);
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+}
+
+Button:hover {
+    -fx-background-color: #4a90e2;
+    -fx-cursor: hand;
+}
+
+Button:pressed {
+    -fx-background-color: #030280;
+}
+
+VBox {
+    -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 8, 0, 0, 4);
+    -fx-alignment: center;
+}
+
+Label {
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+}
+
+HBox {
+    -fx-alignment: center;
+}

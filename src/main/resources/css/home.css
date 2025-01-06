@@ -1,0 +1,172 @@
+
+.search-field {
+    -fx-pref-width: 340px;
+    -fx-pref-height: 30px;
+    -fx-background-radius: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 50px 0 10px;
+    -fx-text-fill: #333333;
+    -fx-background-insets: 0;
+}
+
+
+.search-button {
+    -fx-pref-width: 40px;
+    -fx-pref-height: 30px;
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1999cc;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+}
+
+
+.search-button:hover {
+    -fx-background-color: #1999cc;
+    -fx-text-fill: white;
+}
+/* تخصيص مظهر الـ MenuButton بحجم أصغر */
+.menu-button {
+    -fx-background-color: #2196F3; /* لون الخلفية */
+    -fx-text-fill: white; /* لون النص */
+    -fx-font-size: 12px; /* حجم الخط الأصغر */
+    -fx-font-family: "Segoe UI", sans-serif; /* نوع الخط */
+    -fx-padding: 5px 10px; /* الحشو الأصغر */
+    -fx-border-radius: 5px; /* تدوير الحواف */
+    -fx-background-radius: 5px; /* تدوير الخلفية */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.5, 0, 2); /* تأثير الظل */
+    -fx-transition: background-color 0.3s ease; /* تأثير الانتقال عند التغيير */
+}
+
+/* تخصيص مظهر الـ MenuItem بحجم أصغر */
+.menu-item {
+    -fx-background-color: #f0f0f0; /* الخلفية الافتراضية */
+    -fx-text-fill: #333333; /* لون النص */
+    -fx-font-size: 12px; /* حجم الخط الأصغر */
+    -fx-font-family: "Arial", sans-serif; /* نوع الخط */
+    -fx-padding: 5px 10px; /* الحشو الأصغر */
+    -fx-border-radius: 5px; /* تدوير الحواف */
+    -fx-background-radius: 5px; /* تدوير الخلفية */
+    -fx-opacity: 0.9; /* الشفافية الافتراضية */
+}
+
+/* تخصيص مظهر الـ MenuItem عند المرور بالماوس */
+.menu-item:hover {
+    -fx-background-color: #ffeb3b; /* خلفية عند المرور */
+    -fx-text-fill: #000000; /* لون النص عند المرور */
+    -fx-opacity: 1; /* شفافية كاملة عند المرور */
+    -fx-cursor: hand; /* تغيير المؤشر إلى يد عند المرور */
+}
+
+/* تخصيص مظهر الـ MenuItem عند الضغط عليه */
+.menu-item:pressed {
+    -fx-background-color: #cddc39; /* خلفية عند الضغط */
+    -fx-text-fill: white; /* تغيير لون النص عند الضغط */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2); /* إضافة تأثير الظل عند الضغط */
+}
+
+/* تخصيص مظهر السهم في الـ MenuButton */
+.menu-button .arrow {
+    -fx-background-color: transparent; /* إزالة الخلفية من السهم */
+    -fx-border-color: white; /* تغيير لون حدود السهم */
+    -fx-border-width: 2px; /* عرض الحد */
+}
+
+/* تخصيص مظهر الـ MenuButton عند الضغط عليه */
+.menu-button:pressed {
+    -fx-background-color: #1976d2; /* تغيير اللون عند الضغط */
+    -fx-text-fill: white; /* تغيير لون النص عند الضغط */
+}
+
+/* تخصيص الخلفية لزر الـ MenuButton عند تفعيله */
+.menu-button:focused {
+    -fx-background-color: #0288d1; /* تغيير اللون عند التفعيل */
+    -fx-text-fill: white; /* تغيير لون النص */
+    -fx-border-color: #ffffff; /* تغيير حدود الزر */
+}
+
+/* تخصيص مظهر الـ MenuItem بعد اختياره */
+.menu-item:selected {
+    -fx-background-color: #0288d1; /* تغيير الخلفية بعد الاختيار */
+    -fx-text-fill: white; /* تغيير لون النص */
+}
+
+/* إضافة تأثير التلاشي عند ظهور الـ MenuButton */
+.menu-button {
+    -fx-opacity: 0.9;
+    -fx-transition: opacity 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+    -fx-opacity: 1;
+}
+
+.new-button {
+    -fx-background-color: #0288d1; /* لون الخلفية */
+    -fx-text-fill: rgb(255, 255, 255); /* لون النص */
+    -fx-font-size: 14px; /* حجم الخط */
+    -fx-padding: 5px 15px; /* الحشو */
+    -fx-border-radius: 5px; /* تدوير الحواف */
+    -fx-background-radius: 5px; /* تدوير الخلفية */
+}
+
+.new-button:hover {
+    -fx-background-color: #0f3abc;
+    -fx-cursor: hand;
+}
+/* تصميم البطاقة */
+.card {
+    -fx-background-color: #ffffff; /* خلفية بيضاء */
+    -fx-border-color: #dcdcdc; /* لون الحدود */
+    -fx-border-width: 1; /* سمك الحدود */
+    -fx-border-radius: 10; /* زوايا دائرية للحدود */
+    -fx-background-radius: 10; /* زوايا دائرية للخلفية */
+    -fx-padding: 15; /* مسافة داخلية */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.1, 0, 2); /* تأثير ظل */
+    -fx-font-family: "Arial", sans-serif; /* نوع الخط */
+}
+
+/* تصميم العنوان */
+.card .label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333; /* لون النص */
+}
+
+/* تصميم الوصف */
+.card .description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666; /* لون النص */
+    -fx-wrap-text: true;
+}
+
+/* تصميم الأزرار */
+.card .edit-button {
+    -fx-background-color: #4caf50; /* لون الخلفية */
+    -fx-text-fill: #ffffff; /* لون النص */
+    -fx-border-radius: 5; /* زوايا دائرية */
+    -fx-background-radius: 5;
+    -fx-padding: 5 10; /* مسافة داخلية */
+}
+
+.card .delete-button {
+    -fx-background-color: #f44336; /* لون الخلفية */
+    -fx-text-fill: #ffffff; /* لون النص */
+    -fx-border-radius: 5; /* زوايا دائرية */
+    -fx-background-radius: 5;
+    -fx-padding: 5 10; /* مسافة داخلية */
+}
+
+/* إضافة تأثير عند تمرير المؤشر */
+.card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.2, 0, 4); /* تعزيز الظل */
+    -fx-transform: scale(1.01); /* تكبير خفيف */
+    -fx-cursor: hand; /* تغيير المؤشر */
+}
+
+

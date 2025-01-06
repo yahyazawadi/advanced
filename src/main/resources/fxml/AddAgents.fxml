@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="750.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddAgentsController">
+    <children>
+        <Label layoutX="279.0" layoutY="24.0" prefHeight="48.0" prefWidth="200.0" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #030280;" text="Agent Registration">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="30.0" layoutY="90.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="ID (Username):" />
+        <TextField fx:id="idField" layoutX="160.0" layoutY="85.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="42.0" layoutY="140.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="First Name:" />
+        <TextField fx:id="firstNameField" layoutX="160.0" layoutY="135.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="43.0" layoutY="190.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Last Name:" />
+        <TextField fx:id="lastNameField" layoutX="160.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="60.0" layoutY="240.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Email:" />
+        <TextField fx:id="emailField" layoutX="160.0" layoutY="235.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="46.0" layoutY="290.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Password:" />
+        <PasswordField fx:id="passwordField" layoutX="160.0" layoutY="285.0" prefHeight="30.0" prefWidth="200.0" />
+        <Label fx:id="passwordHintLabel" layoutX="144.0" layoutY="327.0" prefHeight="20.0" prefWidth="400.0" style="-fx-text-fill: red; -fx-font-size: 11px;" text="" />
+
+        <Label layoutX="400.0" layoutY="90.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Phone Number:" />
+        <TextField fx:id="phoneField" layoutX="520.0" layoutY="85.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="400.0" layoutY="140.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Company Name:" />
+        <TextField fx:id="companyNameField" layoutX="520.0" layoutY="135.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="400.0" layoutY="190.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Company Address:" />
+        <TextField fx:id="companyAddressField" layoutX="520.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" />
+
+        <Label layoutX="445.0" layoutY="240.0" style="-fx-font-weight: bold; -fx-font-size: 14px;" text="Role:" />
+        <ChoiceBox fx:id="roleChoiceBox" layoutX="520.0" layoutY="235.0" prefHeight="30.0" prefWidth="200.0">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="lister" />
+                    <String fx:value="buyer" />
+                    <String fx:value="lister and buyer" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+
+        <HBox alignment="CENTER" layoutX="249.0" layoutY="404.0" prefHeight="48.0" prefWidth="260.0" spacing="25.0">
+            <Button fx:id="btn_submit" onAction="#handleSubmit" prefHeight="35.0" prefWidth="100.0" style="-fx-font-size: 14px; -fx-background-color: #030280; -fx-text-fill: white;" text="Submit" />
+            <Button fx:id="btn_cancel" onAction="#handleClear" prefHeight="35.0" prefWidth="100.0" style="-fx-font-size: 14px; -fx-background-color: red; -fx-text-fill: white;" text="Cancel" />
+        </HBox>
+    </children>
+</AnchorPane>

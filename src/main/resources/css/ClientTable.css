@@ -1,0 +1,30 @@
+.table-view {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1px;
+}
+
+.table-view .table-header {
+    -fx-background-color: #007bff; /* Header background */
+    -fx-text-fill: white; /* Header text color */
+}
+
+.table-view .table-row {
+    -fx-background-color: white; /* Row background */
+}
+
+.table-view .table-row:selected {
+    -fx-background-color: #007bff; /* Selected row background */
+    -fx-text-fill: white; /* Selected row text color */
+}
+
+.button {
+    -fx-background-color: #007bff; /* Button background */
+    -fx-text-fill: white; /* Button text color */
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Button hover background */
+}
