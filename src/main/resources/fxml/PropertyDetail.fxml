@@ -8,7 +8,7 @@
 <AnchorPane xmlns:fx="http://javafx.com/javafx"
             fx:id="contentArea"
             fx:controller="controllers.PropertyDetailController"
-            prefHeight="730.0" prefWidth="800.0" stylesheets="@../css/home.css">
+            prefHeight="730.0" prefWidth="800.0" stylesheets="@../css/Properties.css">
     <children>
         <!-- Header -->
         <AnchorPane prefHeight="60.0" prefWidth="800.0" style="-fx-background-color: #D1CECE;">

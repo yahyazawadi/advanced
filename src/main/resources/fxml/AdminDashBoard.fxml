@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="684.0" prefWidth="1302.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="684.0" prefWidth="1302.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashBoardAdminController">
     <children>
         <VBox layoutX="85.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
@@ -138,14 +138,14 @@
         </HBox>
         <VBox layoutX="889.0" layoutY="199.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
-                <Label  style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Agents">
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Agents">
                     <VBox.margin>
                         <Insets left="16.0" top="14.0" />
                     </VBox.margin>
                 </Label>
-                <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/home.png" />
+                        <Image url="@../images/agentcolor.png" />
                     </image>
                     <VBox.margin>
                         <Insets left="270.0" top="-35.0" />
@@ -163,16 +163,16 @@
                 </Text>
             </children>
         </VBox>
-        <VBox layoutX="898.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
+        <VBox layoutX="897.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>
-                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Clients">
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Customer">
                     <VBox.margin>
                         <Insets left="16.0" top="14.0" />
                     </VBox.margin>
                 </Label>
                 <ImageView fitHeight="36.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/home.png" />
+                        <Image url="@../images/clients.jpg" />
                     </image>
                     <VBox.margin>
                         <Insets left="270.0" top="-35.0" />

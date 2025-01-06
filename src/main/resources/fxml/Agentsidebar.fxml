@@ -92,7 +92,7 @@
                                         <Image url="@../images/add.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="newClientButton" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleAddClient" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: transparent;" styleClass="Hbutton" text="New Clients" wrapText="true">
+                                <Button fx:id="newClientButton" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleAddClient" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: transparent;" styleClass="Hbutton" text="New Customer" wrapText="true">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -119,7 +119,7 @@
                                     </HBox.margin>
                                 </ImageView>
 
-                                <Button fx:id="myclientsButton" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleViewMyClients" prefHeight="35.0" prefWidth="121.0" style="-fx-background-color: transparent;" styleClass="Hbutton" text="My Clients" wrapText="true">
+                                <Button fx:id="myclientsButton" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleViewMyClients" prefHeight="35.0" prefWidth="121.0" style="-fx-background-color: transparent;" styleClass="Hbutton" text="My Customers" wrapText="true">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -137,7 +137,6 @@
                                 <Insets top="-30.0" />
                             </VBox.margin>
                         </HBox>
-
 
                         <HBox prefHeight="57.0" prefWidth="200.0" styleClass="HBox">
 

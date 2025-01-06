@@ -69,7 +69,7 @@
                                         <Image url="@../images/add.png" />
                                     </image>
                                 </ImageView>
-                                <Button fx:id="newClientButton" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleAddClient" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: transparent;" styleClass="Hbutton" text="New Clients" wrapText="true">
+                                <Button fx:id="newClientButton" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleAddClient" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: transparent;" styleClass="Hbutton" text="New Customer" wrapText="true">
                                     <font>
                                         <Font size="16.0" />
                                     </font>
@@ -96,7 +96,7 @@
                                     </HBox.margin>
                                 </ImageView>
 
-                                <Button fx:id="clientsButton" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleViewClients" prefHeight="35.0" prefWidth="121.0" style="-fx-background-color: transparent;" styleClass="Hbutton" text="Clients" wrapText="true">
+                                <Button fx:id="clientsButton" alignment="CENTER_LEFT" maxWidth="Infinity" mnemonicParsing="false" onAction="#handleViewClients" prefHeight="35.0" prefWidth="121.0" style="-fx-background-color: transparent;" styleClass="Hbutton" text="Customers" wrapText="true">
                                     <font>
                                         <Font size="16.0" />
                                     </font>

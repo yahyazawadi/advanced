@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="684.0" prefWidth="1302.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="684.0" prefWidth="1302.0" style="-fx-background-color: #faf7f7;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardAgentsController">
     <children>
         <VBox layoutX="85.0" layoutY="380.0" prefHeight="131.0" prefWidth="319.0" style="-fx-border-color: #0C067E; -fx-border-radius: 20; -fx-background-color: #fff;">
             <children>

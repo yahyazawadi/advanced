@@ -167,8 +167,9 @@
 /* إضافة تأثير عند تمرير المؤشر */
 .card:hover {
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.2, 0, 4); /* تعزيز الظل */
-    -fx-transform: scale(1.01); /* تكبير خفيف */
+    -fx-padding: 13; /* Slight padding shrink for visual scaling effect */
     -fx-cursor: hand; /* تغيير المؤشر */
 }
+
 
 

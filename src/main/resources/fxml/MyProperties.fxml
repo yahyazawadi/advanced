@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane fx:id="ToDeleteArea" prefHeight="730.0" prefWidth="1190.0" stylesheets="@../css/home.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controllers.ViewMyPropertiesController">
+<AnchorPane fx:id="ToDeleteArea" prefHeight="730.0" prefWidth="1190.0" stylesheets="@../css/Properties.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="controllers.ViewMyPropertiesController">
 
     <children>
         <!-- الشريط العلوي -->

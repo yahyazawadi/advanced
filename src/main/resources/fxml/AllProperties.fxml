@@ -7,7 +7,7 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <AnchorPane fx:id="ToDeleteArea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ViewPropertiesController"
-            prefHeight="730.0" prefWidth="1190.0" stylesheets="@../css/home.css">
+            prefHeight="730.0" prefWidth="1190.0" stylesheets="@../css/Properties.css">
 
     <children>
         <!-- الشريط العلوي -->

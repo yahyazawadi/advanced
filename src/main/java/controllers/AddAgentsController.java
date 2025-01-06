@@ -24,10 +24,10 @@ public class AddAgentsController {
     @FXML
     private ChoiceBox<String> roleChoiceBox;
 
-    private final AgentsDAOImp agentsDAOImp;
+    private final AgentsDAOImp agentsDOIAImp;
 
     public AddAgentsController() {
-        this.agentsDAOImp = new AgentsDAOImp();
+        this.agentsDOIAImp = new AgentsDAOImp();
     }
 
     @FXML
@@ -90,7 +90,7 @@ public class AddAgentsController {
         agents.setCompanyAddress(companyAddress);
 
         try {
-            agentsDAOImp.save(agents);
+            agentsDOIAImp.save(agents);
             showAlert(Alert.AlertType.INFORMATION, "Success", "Agent registered successfully!");
             clearFields();
         } catch (Exception e) {
