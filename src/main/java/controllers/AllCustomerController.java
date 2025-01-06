@@ -12,11 +12,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.layout.HBox;
 import main.models.Customer;
-import main.imp.CustomerDOAImp;
+import main.imp.CustomerDAOImp;
 
 import java.util.List;
 
-public class AllClientController {
+public class AllCustomerController {
     public HBox bottomHBox;
     public TableColumn checkboxColumn;
     @FXML
@@ -42,7 +42,7 @@ public class AllClientController {
     @FXML
     private Button deleteClientButton;
 
-    private final CustomerDOAImp customerService = new CustomerDOAImp();
+    private final CustomerDAOImp customerService = new CustomerDAOImp();
     private ObservableList<Customer> customerList;
 
     @FXML

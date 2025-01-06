@@ -14,11 +14,18 @@ import java.util.List;
 
 
 public class RealEstateDAOImp implements RealEstateDAO {
-    HibernateUtil hibernateUtil;
+    /*HibernateUtil hibernateUtil;
     SessionFactory sessionFactory;
     public RealEstateDAOImp() {
         hibernateUtil=HibernateUtil.getInstance();
         SessionFactory sessionFactory=hibernateUtil.getSessionFactory();
+    }*/
+    HibernateUtil hibernateUtil = HibernateUtil.getInstance();
+    SessionFactory sessionFactory;
+
+    public RealEstateDAOImp() {
+        HibernateUtil var10001 = this.hibernateUtil;
+        this.sessionFactory = HibernateUtil.getSessionFactory();
     }
     @Override
     public void save(RealEstate realEstate) {
@@ -127,5 +134,65 @@ public class RealEstateDAOImp implements RealEstateDAO {
             }
         }
         return realEstates;
+    }
+
+    public List<RealEstate> searchRealEstate(String name) {
+        Session session = this.sessionFactory.openSession();
+        List<RealEstate> realEstates = null;
+
+        try {
+            session.beginTransaction();
+            String hql = "FROM RealEstate WHERE lower(NameOfProperty) LIKE :name";
+            realEstates = session.createQuery(hql, RealEstate.class).setParameter("name", "%" + name.toLowerCase() + "%").getResultList();
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            if (session.getTransaction() != null) {
+                session.getTransaction().rollback();
+            }
+
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        realEstates.forEach((realEstate) -> {
+            System.out.println("Property ID: " + realEstate.getId());
+            System.out.println("Name: " + realEstate.getNameOfProperty());
+            System.out.println("Price: " + realEstate.getPrice());
+            System.out.println("-----------------------------------");
+        });
+        return realEstates;
+    }
+
+    public List<RealEstate> filterRealEstates(String priceRange, String propertyType) {
+        Session session = this.sessionFactory.openSession();
+        List<RealEstate> filteredResults = null;
+
+        try {
+            session.beginTransaction();
+            String hql = "FROM RealEstate WHERE 1=1";
+            if (priceRange != null) {
+                if (priceRange.equals("Under $100,000")) {
+                    hql = hql + " AND price < 100000";
+                } else if (priceRange.equals("$100,000 - $500,000")) {
+                    hql = hql + " AND price BETWEEN 100000 AND 500000";
+                } else if (priceRange.equals("Above $500,000")) {
+                    hql = hql + " AND price > 500000";
+                }
+            }
+
+            if (propertyType != null) {
+                hql = hql + " AND Type = :propertyType";
+            }
+
+            filteredResults = session.createQuery(hql, RealEstate.class).setParameter("propertyType", propertyType).getResultList();
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return filteredResults;
     }
 }

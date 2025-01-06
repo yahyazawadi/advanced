@@ -11,11 +11,11 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 
-public class CustomerDOAImp implements CustomerDAO {
+public class CustomerDAOImp implements CustomerDAO {
 
     private final SessionFactory sessionFactory;
 
-    public CustomerDOAImp() {
+    public CustomerDAOImp() {
         HibernateUtil hibernateUtil = HibernateUtil.getInstance();
         sessionFactory = HibernateUtil.getSessionFactory();
     }

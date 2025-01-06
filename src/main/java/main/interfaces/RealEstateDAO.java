@@ -15,4 +15,9 @@ public interface RealEstateDAO {
     public RealEstate getRealEstateById(int id);
 
     void start(Stage primaryStage);
+
+
+    List<RealEstate> searchRealEstate(String var1);
+
+    List<RealEstate> filterRealEstates(String var1, String var2);
 }

@@ -60,8 +60,7 @@ public class AgentNavBarController {
         newPropertiesButton.setOnAction(this::handleAddProperties);
         newClientButton.setOnAction(this::handleAddClient);
         myclientsButton.setOnAction(this::handleViewMyClients);
-        receivedPropertyInquiriesButton .setOnAction(this::handleViewInquiries);
-        sentPropertyInquiriesButton.setOnAction(this::handlePropertyInquiries);
+
         viewallPropertiesButton.setOnAction(this::handleViewAllProperties);
         viewmyPropertiesButton.setOnAction(this::handleViewMyProperties);
         receivedPropertyOffersButton.setOnAction(this::handleReceivedPropertyOffers);
@@ -70,21 +69,13 @@ public class AgentNavBarController {
         loadPage("/fxml/AgentDashboard.fxml");
     }
 
-    private void handleViewMyProperties(ActionEvent actionEvent) {loadPage("/fxml/myproperties.fxml");
+    private void handleViewMyProperties(ActionEvent actionEvent) {loadPage("/fxml/MyProperties.fxml");
     }
 
-    private void handleViewAllProperties(ActionEvent actionEvent) { loadPage("/fxml/allproperties.fxml");
+    private void handleViewAllProperties(ActionEvent actionEvent) { loadPage("/fxml/AllProperties.fxml");
     }
 
-    @FXML
-    private void handleViewInquiries(ActionEvent actionEvent) {
-        loadPage("/fxml/Inquiries.fxml");
-    }
 
-    @FXML
-    private void handlePropertyInquiries(ActionEvent actionEvent) {
-        loadPage("/fxml/SentInquries.fxml");
-    }
 
     /**
      * Handles navigation to a specific FXML file.
@@ -122,7 +113,7 @@ public class AgentNavBarController {
     }
 
     public void handleViewMyClients(ActionEvent event) {
-        loadPage("/fxml/allClients.fxml");
+        loadPage("/fxml/AllCustomers.fxml");
     }
 
 

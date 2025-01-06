@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane stylesheets="@../css/addClint.css" prefHeight="500.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddClientController">
+<BorderPane stylesheets="@../css/addClint.css" prefHeight="500.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddCustomerController">
     <center>
         <VBox alignment="CENTER" maxHeight="700.0" maxWidth="800.0" spacing="20"
               style="-fx-background-color: linear-gradient(to bottom, #ffffff, #e6f7ff); -fx-alignment: center; -fx-padding: 20; -fx-border-radius: 10; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 10, 0, 0, 5);">

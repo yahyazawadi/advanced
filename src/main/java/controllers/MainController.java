@@ -14,7 +14,7 @@ public class MainController {
     }
 
     public void goToAddClient() {
-        loadPage("addClient.fxml");
+        loadPage("AddCustomer.fxml");
     }
 
 

@@ -4,12 +4,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import main.models.RealEstate;
 import main.imp.RealEstateDAOImp;
 
@@ -19,12 +22,13 @@ import java.util.List;
 
 public class ViewPropertiesController {
     @FXML
-    public AnchorPane todeleteArea;
+    public AnchorPane ToDeleteArea;
     @FXML
     private GridPane contentArea;
     private Button backButton;
     private RealEstateDAOImp realEstateDAO = new RealEstateDAOImp();
-
+    @FXML
+    private TextField searchField;
     @FXML
     public void initialize() {
         // عرض البيانات عند تهيئة الصفحة
@@ -32,22 +36,53 @@ public class ViewPropertiesController {
         contentArea.setVgap(20);  // زيادة المسافة بين الصفوف
         displayRealEstateCards();
     }
+    @FXML
+    private void updateContentArea(List<RealEstate> realEstates) {
+        this.contentArea.getChildren().clear();
+        int row = 0;
+        int col = 0;
 
-    /**
-     * Initializes the controller after FXML is loaded.
-     */
+        for(RealEstate realEstate : realEstates) {
+            AnchorPane card = this.createCard(realEstate);
+            this.contentArea.add(card, col, row);
+            ++col;
+            if (col == 3) {
+                col = 0;
+                ++row;
+            }
+        }
 
+    }
+    public void handleSearch() {
+        String query = this.searchField.getText().toLowerCase();
+        List<RealEstate> results = this.realEstateDAO.searchRealEstate(query);
+        this.contentArea.getChildren().clear();
 
-    /**
-     * Handles the Edit button click and loads the edit.fxml page.
-     */
+        for(RealEstate realEstate : results) {
+            this.contentArea.add(this.createCard(realEstate), 0, this.contentArea.getRowCount());
+        }
 
+    }
+    @FXML
+    private void openFilterWindow() {
+        try {
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/FilterWindow.fxml"));
+            Parent filterView = (Parent)loader.load();
+            FilterWindowController controller = (FilterWindowController)loader.getController();
+            controller.setFilterListener((priceRange, propertyType) -> {
+                List<RealEstate> filteredResults = this.realEstateDAO.filterRealEstates(priceRange, propertyType);
+                this.updateContentArea(filteredResults);
+            });
+            Stage stage = new Stage();
+            stage.setTitle("Filter Properties");
+            stage.setScene(new Scene(filterView));
+            stage.setResizable(false);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-    /**
-     * Loads any FXML page into the content area dynamically.
-     *
-     * @param fxmlFile The path to the FXML file.
-     */
+    }
     public void loadPage(String fxmlFile) {
         try {
             // Load FXML content
@@ -146,12 +181,13 @@ public class ViewPropertiesController {
             loader.<PropertyDetailController>getController().setRealEstate(realEstate);
             // Update the contentArea with the new detail view
            // contentArea.getChildren().clear();
-            todeleteArea.getChildren().add(detailView);
+            ToDeleteArea.getChildren().add(detailView);
             // تحديث محتوى الصفحة
-            todeleteArea.getChildren().setAll(detailView);
+            ToDeleteArea.getChildren().setAll(detailView);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
 }
+

@@ -5,9 +5,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
 import main.models.Customer;
-import main.imp.CustomerDOAImp;
+import main.imp.CustomerDAOImp;
 
-public class AddClientController {
+public class AddCustomerController {
     public Button saveButton;
 
     @FXML
@@ -31,10 +31,10 @@ public class AddClientController {
     @FXML
     private TextArea notesField;
 
-    private final CustomerDOAImp customerDOIAImp;
+    private final CustomerDAOImp customerDOIAImp;
 
-    public AddClientController() {
-        this.customerDOIAImp = new CustomerDOAImp();
+    public AddCustomerController() {
+        this.customerDOIAImp = new CustomerDAOImp();
     }
 
     @FXML

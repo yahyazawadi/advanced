@@ -94,11 +94,11 @@ public class AdminNavBarController {
     }
 
     public void handleAddProperties(ActionEvent event) {
-        loadPage("/fxml/Add_real_estate.fxml");
+        loadPage("/fxml/AddProperties.fxml");
     }
 
     public void handleViewProperties(ActionEvent event) {
-        loadPage("/fxml/myproperties.fxml");
+        loadPage("/fxml/MyProperties.fxml");
     }
 
     public void handleAddClient(ActionEvent event) {
@@ -106,7 +106,7 @@ public class AdminNavBarController {
     }
 
     public void handleViewClients(ActionEvent event) {
-        loadPage("/fxml/allClients.fxml");
+        loadPage("/fxml/AllCustomers.fxml");
     }
 
     public void handlePropertyInquiriesButton(ActionEvent event) {

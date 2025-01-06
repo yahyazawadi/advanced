@@ -4,10 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.AnchorPane;
+
 import java.io.IOException;
 
 public class viewproperties {
@@ -26,10 +25,10 @@ public class viewproperties {
     }
 
     /**
-     * Handles the Edit button click and loads the edit.fxml page.
+     * Handles the Edit button click and loads the EditAndDelete.fxml page.
      */
     public void handleEditButtonAction(ActionEvent actionEvent) {
-        loadPage("/fxml/edit.fxml"); // Correct FXML file path
+        loadPage("/fxml/EditAndDelete.fxml"); // Correct FXML file path
     }
 
     /**

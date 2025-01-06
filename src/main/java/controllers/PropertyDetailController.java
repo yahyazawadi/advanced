@@ -10,7 +10,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import main.models.RealEstate;
-import main.models.Agents;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -97,7 +96,7 @@ public class PropertyDetailController {
     @FXML
     private void handleEditButtonAction(int propertyId) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/edit.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/EditAndDelete.fxml"));
             Parent editView = loader.load();
 
             DeleteAndEditController controller = loader.getController();
@@ -119,7 +118,7 @@ public class PropertyDetailController {
     private void goBack() {
         try {
 
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/allproperties.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/AllProperties.fxml"));
             Parent viewPropertiesView = loader.load();
 
             Parent rootNode = propertyImage.getScene().getRoot();

@@ -165,7 +165,7 @@ public class DeleteAndEditController {
     @FXML
     private void goBack() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/myproperties.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/MyProperties.fxml"));
             Parent viewPropertiesView = loader.load();
 
 
