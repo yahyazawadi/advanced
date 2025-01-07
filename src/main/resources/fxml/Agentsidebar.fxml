@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="832.0" prefWidth="1366.0" stylesheets="@../css/SideBar.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AgentSideBarController">
+    <left>
+        <AnchorPane prefHeight="704.0" prefWidth="253.0" styleClass="sidebar" BorderPane.alignment="TOP_CENTER">
+            <VBox alignment="CENTER" layoutX="24.0" layoutY="152.0" prefHeight="446.0" prefWidth="216.0" spacing="27.0">
+                <HBox prefHeight="48.0" prefWidth="212.0" styleClass="HBox">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <VBox.margin>
+                        <Insets left="-3.0" top="-60.0"/>
+                    </VBox.margin>
+                    <ImageView fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/add.png"/>
+                    </ImageView>
+                    <Button fx:id="newPropertiesButton" maxWidth="Infinity" mnemonicParsing="false"
+                            onAction="#handleAddProperties" prefHeight="27.0" prefWidth="126.0"
+                            style="-fx-background-color: transparent;" styleClass="Hbutton" text="Add Property"
+                            wrapText="true">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                    </Button>
+                </HBox>
+                <HBox prefHeight="58.0" prefWidth="216.0" styleClass="HBox">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <VBox.margin>
+                        <Insets top="-25.0"/>
+                    </VBox.margin>
+                    <ImageView fitHeight="30.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                            <Insets left="-3.0" top="2.0"/>
+                        </HBox.margin>
+                        <Image url="@../images/aperment.jpg"/>
+                    </ImageView>
+                    <Button fx:id="viewallPropertiesButton" maxWidth="Infinity"
+                            mnemonicParsing="false" onAction="#handleViewProperties" prefHeight="35.0"
+                            prefWidth="125.0" style="-fx-background-color: transparent;" styleClass="Hbutton"
+                            text="All Properties" wrapText="true">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                    </Button>
+                </HBox>
+                <HBox prefHeight="58.0" prefWidth="216.0" styleClass="HBox">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <VBox.margin>
+                        <Insets top="-20.0"/>
+                    </VBox.margin>
+                    <ImageView fitHeight="30.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                        <HBox.margin>
+                            <Insets left="-3.0" top="2.0"/>
+                        </HBox.margin>
+                        <Image url="@../images/aperment.jpg"/>
+                    </ImageView>
+                    <Button fx:id="viewmyPropertiesButton" maxWidth="Infinity"
+                            mnemonicParsing="false" onAction="#handleViewProperties" prefHeight="35.0"
+                            prefWidth="125.0" style="-fx-background-color: transparent;" styleClass="Hbutton"
+                            text="My Properties" wrapText="true">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                    </Button>
+                </HBox>
+                <HBox prefHeight="50.0" prefWidth="216.0" styleClass="HBox">
+                    <VBox.margin>
+                        <Insets left="-7.0" top="-20.0"/>
+                    </VBox.margin>
+                    <Button fx:id="newClientButton" maxWidth="Infinity"
+                            mnemonicParsing="false" onAction="#handleAddClient" prefHeight="30.0"
+                            prefWidth="121.0" style="-fx-background-color: transparent;" styleClass="Hbutton"
+                            text=" Add Customer" wrapText="true">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="25.0" pickOnBounds="true"
+                                       preserveRatio="true">
+                                <Image url="@../images/add.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </HBox>
+                <HBox prefHeight="57.0" prefWidth="200.0" styleClass="HBox">
+                    <VBox.margin>
+                        <Insets left="-8.0" top="-20.0"/>
+                    </VBox.margin>
+
+                    <Button fx:id="myclientsButton" maxWidth="Infinity"
+                            mnemonicParsing="false" onAction="#handleViewMyClients" prefHeight="35.0"
+                            prefWidth="121.0" style="-fx-background-color: transparent;" styleClass="Hbutton"
+                            text="  My Customers" wrapText="true">
+                        <font>
+                            <Font size="16.0"/>
+                        </font>
+                        <cursor>
+                            <Cursor fx:constant="HAND"/>
+                        </cursor>
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                        <graphic>
+                            <ImageView fitHeight="25.0" fitWidth="31.0" nodeOrientation="RIGHT_TO_LEFT"
+                                       pickOnBounds="true" preserveRatio="true">
+                                <Image url="@../images/group.png"/>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+
+
+                </HBox>
+
+
+            </VBox>
+            <VBox alignment="CENTER" layoutY="-25.0" prefHeight="62.0" prefWidth="212.0" spacing="27.0">
+                <padding>
+                    <Insets top="40.0"/>
+                </padding>
+
+            </VBox>
+            <HBox layoutX="26.0" layoutY="628.0" prefHeight="58.0" prefWidth="195.0" styleClass="HBox">
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <Button fx:id="login" mnemonicParsing="false" onAction="#login" prefHeight="38.0" prefWidth="158.0"
+                        style="-fx-background-color: transparent;" text="Logout" textFill="RED">
+                    <font>
+                        <Font name="System Bold" size="16.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets right="30.0"/>
+                    </HBox.margin>
+                    <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="25.0" nodeOrientation="RIGHT_TO_LEFT"
+                                   pickOnBounds="true" preserveRatio="true">
+                            <Image url="@../images/logoutIcone.png"/>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="61.0" layoutY="49.0" prefHeight="34.0" prefWidth="170.0">
+                <cursor>
+                    <Cursor fx:constant="HAND"/>
+                </cursor>
+                <padding>
+                    <Insets left="-70.0"/>
+                </padding>
+                <ImageView fitHeight="23.0" fitWidth="22.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true"
+                           preserveRatio="true">
+                    <HBox.margin>
+                        <Insets right="10.0"/>
+                    </HBox.margin>
+                    <Image url="@../images/dashboard-icon-256x256-84zenj5q.png"/>
+                </ImageView>
+                <Button fx:id="dashboardButton" contentDisplay="CENTER" maxWidth="Infinity"
+                        mnemonicParsing="false" prefHeight="34.0" prefWidth="126.0"
+                        style="-fx-background-color: transparent;" styleClass="Hbutton" text="DashBoard"
+                        wrapText="true">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets left="-15.0" right="15.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+
+        </AnchorPane>
+    </left>
+    <top>
+        <AnchorPane prefHeight="101.0" prefWidth="1366.0" style="-fx-background-color: #030280;"
+                    BorderPane.alignment="CENTER">
+            <HBox layoutX="14.0" layoutY="28.0" prefHeight="57.0" prefWidth="256.0">
+                <ImageView fitHeight="38.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                    <HBox.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </HBox.margin>
+                    <Image url="@../images/real.png"/>
+                </ImageView>
+                <Label prefHeight="53.0" prefWidth="197.0" text="RealEsteat" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="30.0"/>
+                    </font>
+                    <padding>
+                        <Insets left="5.0"/>
+                    </padding>
+                </Label>
+            </HBox>
+        </AnchorPane>
+    </top>
+    <center>
+        <AnchorPane prefHeight="728.0" prefWidth="1115.0" style="-fx-background-color: #fff;"
+                    BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="-2.0"/>
+            </BorderPane.margin>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+            <VBox alignment="CENTER" layoutX="35.0" layoutY="23.0" styleClass="centerarea-vbox">
+                <HBox fx:id="contentArea" alignment="CENTER_LEFT" maxWidth="Infinity"/>
+            </VBox>
+            <AnchorPane layoutX="61.0" layoutY="425.0" prefHeight="214.0" prefWidth="200.0"/>
+        </AnchorPane>
+    </center>
+</BorderPane>

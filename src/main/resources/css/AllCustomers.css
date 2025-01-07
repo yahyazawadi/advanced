@@ -1,0 +1,16 @@
+#titleLabel {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4CAF50;
+    -fx-font-family: 'Arial', sans-serif;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0.0, 2, 2);
+}
+
+#bottomHBox {
+    -fx-pref-width: 100%;
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 10;
+}
+
+.bottomHBox {
+}

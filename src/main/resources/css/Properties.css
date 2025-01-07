@@ -1,0 +1,166 @@
+
+.search-field {
+    -fx-pref-width: 340px;
+    -fx-pref-height: 30px;
+    -fx-background-radius: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10px;
+    -fx-font-size: 14px;
+    -fx-padding: 0 50px 0 10px;
+    -fx-text-fill: #333333;
+    -fx-background-insets: 0;
+}
+
+
+.search-button {
+    -fx-pref-width: 40px;
+    -fx-pref-height: 30px;
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1999cc;
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 10px;
+    -fx-cursor: hand;
+    -fx-background-insets: 0;
+}
+
+
+.search-button:hover {
+    -fx-background-color: #1999cc;
+    -fx-text-fill: white;
+}
+
+.menu-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.5, 0, 2);
+    -fx-transition: background-color 0.3s ease;
+}
+.menu-item {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333333;
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-padding: 5px 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-opacity: 0.9;
+}
+
+.menu-item:hover {
+    -fx-background-color: #ffeb3b;
+    -fx-text-fill: #000000;
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+}
+
+.menu-item:pressed {
+    -fx-background-color: #cddc39;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0.5, 0, 2);
+}
+
+.menu-button .arrow {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+}
+
+.menu-button:pressed {
+    -fx-background-color: #1976d2;
+    -fx-text-fill: white;
+}
+
+.menu-button:focused {
+    -fx-background-color: #0288d1;
+    -fx-text-fill: white;
+    -fx-border-color: #ffffff;
+}
+
+.menu-item:selected {
+    -fx-background-color: #0288d1;
+    -fx-text-fill: white;
+}
+
+.menu-button {
+    -fx-opacity: 0.9;
+    -fx-transition: opacity 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+    -fx-opacity: 1;
+}
+
+.new-button {
+    -fx-background-color: #0288d1;
+    -fx-text-fill: rgb(255, 255, 255);
+    -fx-font-size: 14px;
+    -fx-padding: 5px 15px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.new-button:hover {
+    -fx-background-color: #0f3abc;
+    -fx-cursor: hand;
+}
+
+.card {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0.1, 0, 2);
+    -fx-font-family: "Arial", sans-serif;
+}
+
+
+.card .label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+
+.card .description {
+    -fx-font-size: 14px;
+    -fx-text-fill: #666;
+    -fx-wrap-text: true;
+}
+
+
+.card .edit-button {
+    -fx-background-color: #4caf50;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+
+    top: 300%;
+}
+
+.card .delete-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: #ffffff;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5 10;
+}
+
+
+.card:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.2, 0, 4);
+    -fx-padding: 13;
+    -fx-cursor: hand;
+}
+
+
+

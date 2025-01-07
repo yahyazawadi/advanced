@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+
+<GridPane fx:id="ToDeleteArea" hgap="10" vgap="10" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddOfferController">
+
+    <VBox spacing="10">
+        <Button fx:id="backButton" text="←"
+                style="-fx-font-size: 30; -fx-background-color: transparent; -fx-text-fill: #030280;" />
+    </VBox>
+
+
+    <VBox fx:id="contentArea" spacing="20" alignment="CENTER" layoutY="400" style="-fx-padding: 100 0 0 0;">
+
+        <GridPane hgap="20" vgap="150" alignment="CENTER">
+            <VBox spacing="15" GridPane.columnIndex="0">
+                <Label text="Your Email" style="-fx-font-size: 14;" />
+                <TextField fx:id="ta_email" promptText="Enter your email" />
+
+                <Label text="Property ID" style="-fx-font-size: 14;" />
+                <Label fx:id="lb_PropertyId" style="-fx-font-size: 14;" />
+
+                <Label text="Client ID" style="-fx-font-size: 14;" />
+                <TextField fx:id="tv_ClientId" promptText="Enter Client ID" />
+
+                <Label text="Offer Type" style="-fx-font-size: 14;" />
+                <ComboBox fx:id="cb_OfferType" promptText="Select Offer Type">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Buy" />
+                            <String fx:value="Rent" />
+                            <String fx:value="Lease" />
+                        </FXCollections>
+                    </items>
+                </ComboBox>
+            </VBox>
+
+            <VBox spacing="15" GridPane.columnIndex="1">
+                <Label text="Details" style="-fx-font-size: 14;" />
+                <TextArea fx:id="ta_Details" promptText="Enter offer details" prefHeight="100" />
+
+                <Label text="Final Price" style="-fx-font-size: 14;" />
+                <TextField fx:id="tv_FinalPrice" promptText="Enter final price" />
+            </VBox>
+        </GridPane>
+
+        <Button fx:id="btnSubmitOffer" style="-fx-background-color: #030280; -fx-text-fill: white; -fx-font-size: 16; -fx-padding: 10 20;" text="Submit Offer" onAction="#SaveOffer" />
+    </VBox>
+
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+</GridPane>

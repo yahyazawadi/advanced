@@ -1,0 +1,10 @@
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+
+<StackPane fx:id="contentArea" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.MainController">
+    <HBox spacing="10" alignment="TOP_CENTER" style="-fx-padding: 10;">
+        <Button text="Admin Dashboard" onAction="#goToAdminDashboard" />
+        <Button text="Add Client" onAction="#goToAddClient" />
+    </HBox>
+</StackPane>

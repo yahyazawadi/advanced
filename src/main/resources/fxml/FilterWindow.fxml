@@ -1,0 +1,17 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.FilterWindowController"
+            prefHeight="250.0" prefWidth="400.0" stylesheets="@../css/FilterWindow.css">
+    <Label layoutX="50.0" layoutY="30.0" text="Select Price Range:" styleClass="label"/>
+    <ChoiceBox fx:id="priceMenu" layoutX="50.0" layoutY="50.0" prefWidth="300.0"/>
+
+
+    <Label layoutX="50.0" layoutY="80.0" text="Select Property Type:" styleClass="label"/>
+    <ChoiceBox fx:id="typeMenu" layoutX="50.0" layoutY="100.0" prefWidth="300.0"/>
+
+
+    <Button layoutX="150.0" layoutY="180.0" text="Apply" onAction="#applyFilter" styleClass="apply-button"/>
+</AnchorPane>
